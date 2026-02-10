@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui xmlns="https://lvgl.io/xml" version="1.0">
+  <screen id="main" width="480" height="480" radius="circle" bg_color="#090B0F" bg_grad_color="#1A1F28" bg_grad_dir="ver" border_width="1" border_color="#2B3340" pad_all="0">
+    <arc id="main_ornament" width="410" height="410" align="center" min="0" max="100" value="100" color="#212A37" bg_color="#212A37" arc_width="1" opa="40" clickable="false"/>
+
+    <button id="main_coffee" x="240" y="84" width="90" height="90" radius="circle" bg_color="#1A2330" bg_opa="35" border_width="1" border_color="#4A5566" shadow_width="18" shadow_opa="20" shadow_color="#000000">
+      <label text="☕" align="top_mid" y="14" text_color="#F2F5F8"/>
+      <label text="Coffee" align="bottom_mid" y="-11" color="#B5BBC4" text_color="#B5BBC4"/>
+    </button>
+    <button id="main_steam" x="396" y="240" width="90" height="90" radius="circle" bg_color="#2A1F1A" bg_opa="35" border_width="1" border_color="#5B504A" shadow_width="18" shadow_opa="20" shadow_color="#000000">
+      <label text="♨" align="top_mid" y="14" text_color="#F2F5F8"/>
+      <label text="Steam" align="bottom_mid" y="-11" color="#B5BBC4" text_color="#B5BBC4"/>
+    </button>
+    <button id="main_water" x="240" y="396" width="90" height="90" radius="circle" bg_color="#17242E" bg_opa="35" border_width="1" border_color="#4E5A64" shadow_width="18" shadow_opa="20" shadow_color="#000000">
+      <label text="💧" align="top_mid" y="14" text_color="#F2F5F8"/>
+      <label text="Water" align="bottom_mid" y="-11" color="#B5BBC4" text_color="#B5BBC4"/>
+    </button>
+    <button id="main_settings" x="84" y="240" width="90" height="90" radius="circle" bg_color="#22202A" bg_opa="35" border_width="1" border_color="#555266" shadow_width="18" shadow_opa="20" shadow_color="#000000">
+      <label text="⚙" align="top_mid" y="14" text_color="#F2F5F8"/>
+      <label text="Settings" align="bottom_mid" y="-11" color="#B5BBC4" text_color="#B5BBC4"/>
+    </button>
+
+    <label id="brand" text="AURELIA X1" align="bottom_mid" y="-72" color="#7F8792" text_color="#7F8792" letter_space="3"/>
+  </screen>
+
+  <screen id="coffee" width="480" height="480" radius="circle" bg_color="#090B0F" bg_grad_color="#1A1F28" bg_grad_dir="ver" border_width="1" border_color="#2B3340" pad_all="0">
+    <button id="coffee_back" align="top_mid" y="30" width="50" height="50" radius="circle" bg_color="#151A22" bg_opa="45" border_width="1" border_color="#4C5563">
+      <label text="←" text_color="#F2F5F8"/>
+    </button>
+
+    <label id="coffee_prev" text="◀" align="center" x="-164" y="0" color="#5B6470" text_color="#5B6470"/>
+    <label id="coffee_icon" text="☕" align="center" y="-38" text_color="#F2F5F8"/>
+    <label id="coffee_name" text="Espresso" align="center" y="36" text_color="#F2F5F8"/>
+    <label id="coffee_next" text="▶" align="center" x="164" y="0" color="#5B6470" text_color="#5B6470"/>
+
+    <button id="coffee_play" align="bottom_mid" y="-34" width="50" height="50" radius="circle" border_width="1" border_color="#8FD1FF" bg_color="#1E3142" bg_opa="65" shadow_width="16" shadow_opa="25" shadow_color="#0A2538">
+      <label text="▶" text_color="#EAF7FF"/>
+    </button>
+  </screen>
+
+  <screen id="steam" width="480" height="480" radius="circle" bg_color="#090B0F" bg_grad_color="#1A1F28" bg_grad_dir="ver" border_width="1" border_color="#2B3340" pad_all="0">
+    <button id="steam_back" align="top_mid" y="30" width="50" height="50" radius="circle" bg_color="#151A22" bg_opa="45" border_width="1" border_color="#4C5563">
+      <label text="←" text_color="#F2F5F8"/>
+    </button>
+
+    <arc id="steam_arc" width="372" height="372" align="center" min="0" max="100" value="74" color="#FFCFA3" bg_color="#2E3643" arc_width="14"/>
+    <label id="steam_temp" text="93° / 125°" align="center" y="-16" text_color="#F2F5F8"/>
+    <label id="steam_state" text="HEATING" align="center" y="26" color="#C3CAD4" text_color="#C3CAD4" letter_space="2"/>
+  </screen>
+
+  <screen id="hot_water" width="480" height="480" radius="circle" bg_color="#090B0F" bg_grad_color="#1A1F28" bg_grad_dir="ver" border_width="1" border_color="#2B3340" pad_all="0">
+    <button id="water_back" align="top_mid" y="30" width="50" height="50" radius="circle" bg_color="#151A22" bg_opa="45" border_width="1" border_color="#4C5563">
+      <label text="←" text_color="#F2F5F8"/>
+    </button>
+
+    <arc id="water_arc" width="372" height="372" align="center" min="0" max="100" value="87" color="#9BE4FF" bg_color="#2E3643" arc_width="14"/>
+    <label id="water_temp" text="83° / 95°" align="center" y="-28" text_color="#F2F5F8"/>
+    <label id="water_state" text="READY" align="center" y="12" color="#C3CAD4" text_color="#C3CAD4" letter_space="2"/>
+
+    <button id="water_start_stop" align="center" y="62" width="132" height="44" radius="circle" border_width="1" border_color="#9BE4FF" bg_color="#203845" bg_opa="75" shadow_width="16" shadow_opa="24" shadow_color="#062536">
+      <label text="START" text_color="#D8F5FF" letter_space="1"/>
+    </button>
+  </screen>
+
+  <screen id="settings" width="480" height="480" radius="circle" bg_color="#090B0F" bg_grad_color="#1A1F28" bg_grad_dir="ver" border_width="1" border_color="#2B3340" pad_all="0">
+    <button id="settings_back" align="top_mid" y="30" width="50" height="50" radius="circle" bg_color="#151A22" bg_opa="45" border_width="1" border_color="#4C5563">
+      <label text="←" text_color="#F2F5F8"/>
+    </button>
+
+    <label id="settings_icon" text="⚙" align="center" y="-38" text_color="#F2F5F8"/>
+    <label id="settings_title" text="Settings" align="center" y="18" text_color="#F2F5F8"/>
+    <label id="settings_text" text="Placeholder for tuning, profiles and maintenance" align="center" y="64" color="#A3ACB9" text_color="#A3ACB9" width="300" text_align="center"/>
+  </screen>
+</ui>
