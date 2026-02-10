@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="https://lvgl.io/xml/project" version="1.0">
+  <meta>
+    <name>espresso-ui</name>
+    <display width="480" height="480" color_format="RGB565" shape="round"/>
+    <orientation>portrait</orientation>
+    <description>Premium espresso machine UI for ESP32 round display</description>
+  </meta>
+
+  <sources>
+    <include file="espresso_ui.xml" as="ui"/>
+  </sources>
+
+  <entry>
+    <screen id="main"/>
+  </entry>
+
+  <runtime>
+    <tick_period_ms>5</tick_period_ms>
+    <render_mode>partial</render_mode>
+  </runtime>
+</project>

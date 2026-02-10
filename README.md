@@ -1,10 +1,12 @@
 # Espresso UI — LVGL Pro XML
 
-This repository now uses **LVGL Pro XML** only.
+This repository uses an **LVGL Pro XML project layout** for a 480x480 round ESP32 display UI.
 
 ## Files
 
-- `lvgl_pro_xml/espresso_ui.xml`: full screen definition for the espresso-machine UI.
+- `lvgl_pro_xml/project.xml`: project definition (display metadata, source includes, entry screen).
+- `lvgl_pro_xml/screens.xml`: aggregator/include file used by XML tooling.
+- `lvgl_pro_xml/espresso_ui.xml`: full screen UI definition.
 
 ## Included screens
 
@@ -14,16 +16,14 @@ This repository now uses **LVGL Pro XML** only.
 - Hot water (circular temperature/status + start/stop)
 - Settings placeholder
 
-## How to preview
-
-Use the LVGL Pro XML workflow from the LVGL docs to load this XML and preview it in the LVGL environment (simulator/editor pipeline for XML projects).
-
-At runtime you can bind your controller logic to IDs such as:
+## Runtime IDs for binding
 
 - `coffee_name`
 - `steam_arc`, `steam_temp`, `steam_state`
 - `water_arc`, `water_temp`, `water_state`, `water_start_stop`
 
-## Note
+## Notes
 
-All previous non-XML preview and C scaffolding files were intentionally removed per request.
+- `project.xml` is now the XML project entry point.
+- `screens.xml` and `project.xml` reference `espresso_ui.xml` so the UI can be consumed as a project instead of a standalone file.
+- The design remains LVGL Pro XML-only.
