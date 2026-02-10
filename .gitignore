@@ -1,0 +1,20 @@
+# Build directories
+build-sim/
+build/
+
+# ESP-IDF build output
+sdkconfig
+sdkconfig.old
+managed_components/
+dependencies.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
