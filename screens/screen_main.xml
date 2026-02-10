@@ -1,0 +1,109 @@
+<!--
+    Main Screen — Espresso Machine
+    4 icon buttons arranged in a compass layout around a center logo.
+    Tap an icon to navigate to the corresponding sub-screen.
+-->
+<screen permanent="true">
+
+    <styles>
+        <style name="icon_text"
+               text_color="#c_white"
+               text_opa="55%"
+               text_letter_space="0"/>
+
+        <style name="icon_text_pressed"
+               text_color="#c_gold"
+               text_opa="100%"/>
+
+        <style name="logo"
+               text_color="#c_gold"
+               text_opa="70%"
+               text_letter_space="5"/>
+    </styles>
+
+    <view>
+        <style name="scr_bg"/>
+
+        <!-- ── Decorative ring ── -->
+        <lv_obj align="center" width="#ring_diameter" height="#ring_diameter"
+                clickable="false" scrollable="false">
+            <style name="ring"/>
+        </lv_obj>
+
+        <!-- ── Center logo ── -->
+        <lv_label text="ESPRESSO" align="center">
+            <style name="logo"/>
+        </lv_label>
+
+        <!-- ── Coffee button (top) ──
+             U+F0F4 is not in default LVGL symbols, using tint/droplet-style
+             icon approach: styled circle + label.
+             Replace with a proper image asset for production. -->
+        <lv_obj name="btn_coffee" align="center" x="0" y="-148"
+                width="#icon_btn_size" height="#icon_btn_size"
+                scrollable="false">
+            <style name="icon_btn"/>
+            <style name="icon_btn_pressed" selector="pressed"/>
+            <lv_label text="&#xF0FC;" align="center">
+                <style name="icon_text"/>
+                <style name="icon_text_pressed" selector="pressed"/>
+            </lv_label>
+            <screen_load_event screen="screen_coffee"
+                               trigger="clicked"
+                               anim_type="move_left"
+                               duration="350"/>
+        </lv_obj>
+
+        <!-- ── Steam button (right) ──
+             Using charge/bolt symbol &#xF0E7; -->
+        <lv_obj name="btn_steam" align="center" x="148" y="0"
+                width="#icon_btn_size" height="#icon_btn_size"
+                scrollable="false">
+            <style name="icon_btn"/>
+            <style name="icon_btn_pressed" selector="pressed"/>
+            <lv_label text="&#xF0E7;" align="center">
+                <style name="icon_text"/>
+                <style name="icon_text_pressed" selector="pressed"/>
+            </lv_label>
+            <screen_load_event screen="screen_steam"
+                               trigger="clicked"
+                               anim_type="move_left"
+                               duration="350"/>
+        </lv_obj>
+
+        <!-- ── Hot Water button (bottom) ──
+             Using tint/droplet symbol &#xF043; -->
+        <lv_obj name="btn_water" align="center" x="0" y="148"
+                width="#icon_btn_size" height="#icon_btn_size"
+                scrollable="false">
+            <style name="icon_btn"/>
+            <style name="icon_btn_pressed" selector="pressed"/>
+            <lv_label text="&#xF043;" align="center">
+                <style name="icon_text"/>
+                <style name="icon_text_pressed" selector="pressed"/>
+            </lv_label>
+            <screen_load_event screen="screen_water"
+                               trigger="clicked"
+                               anim_type="move_left"
+                               duration="350"/>
+        </lv_obj>
+
+        <!-- ── Settings button (left) ──
+             Using gear symbol &#xF013; -->
+        <lv_obj name="btn_settings" align="center" x="-148" y="0"
+                width="#icon_btn_size" height="#icon_btn_size"
+                scrollable="false">
+            <style name="icon_btn"/>
+            <style name="icon_btn_pressed" selector="pressed"/>
+            <lv_label text="&#xF013;" align="center">
+                <style name="icon_text"/>
+                <style name="icon_text_pressed" selector="pressed"/>
+            </lv_label>
+            <screen_load_event screen="screen_settings"
+                               trigger="clicked"
+                               anim_type="move_left"
+                               duration="350"/>
+        </lv_obj>
+
+    </view>
+</screen>

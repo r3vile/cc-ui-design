@@ -1,0 +1,139 @@
+<!--
+    Hot Water Screen — Espresso Machine
+    Similar to steam screen but with blue accent and a start/stop button.
+    Target temperature is 95°C.
+-->
+<screen permanent="true">
+
+    <styles>
+        <style name="temp_large"
+               text_color="#c_white"
+               text_opa="100%"/>
+
+        <style name="temp_unit"
+               text_color="#c_white"
+               text_opa="40%"/>
+
+        <style name="target_text"
+               text_color="#c_white"
+               text_opa="30%"
+               text_letter_space="2"/>
+
+        <style name="state_text"
+               text_color="#c_blue"
+               text_letter_space="3"/>
+
+        <style name="state_dot"
+               radius="32767"
+               bg_color="#c_blue"
+               bg_opa="100%"/>
+
+        <style name="action_start"
+               radius="32767"
+               bg_color="#c_blue"
+               bg_opa="100%"
+               shadow_width="20"
+               shadow_color="#c_blue"
+               shadow_opa="30%"
+               shadow_spread="0"/>
+
+        <style name="action_start_pressed"
+               bg_color="#c_blue_dark"
+               shadow_opa="50%"/>
+    </styles>
+
+    <view>
+        <style name="scr_bg"/>
+
+        <!-- ── Back button ── -->
+        <lv_obj align="top_mid" y="#nav_btn_y"
+                width="#nav_btn_size" height="#nav_btn_size"
+                scrollable="false">
+            <style name="nav_btn"/>
+            <style name="nav_btn_pressed" selector="pressed"/>
+            <lv_label text="&#xF053;" align="center"
+                      style_text_color="#c_white"
+                      style_text_opa="50%"/>
+            <screen_load_event screen="screen_main"
+                               trigger="clicked"
+                               anim_type="move_right"
+                               duration="350"/>
+        </lv_obj>
+
+        <!-- ── Progress arc ──
+             270° sweep, range 0–95 for water target. -->
+        <lv_arc name="water_arc"
+                align="center"
+                width="#arc_diameter" height="#arc_diameter"
+                bg_angles="135 45"
+                range="0 95"
+                value="78"
+                clickable="false"
+                style_arc_width="#arc_width"
+                style_arc_color="#c_white"
+                style_arc_opa="5%"
+                style_arc_width-indicator="#arc_width"
+                style_arc_color-indicator="#c_blue"
+                style_arc_opa-indicator="100%"
+                style_arc_rounded-indicator="true"
+                style_bg_opa-knob="0"
+                style_pad_all-knob="0">
+            <bind_value subject="water_temp"/>
+        </lv_arc>
+
+        <!-- ── Temperature display ── -->
+        <lv_obj align="center" y="-20"
+                width="content" height="content"
+                style_layout="flex"
+                style_flex_flow="row"
+                style_flex_cross_place="start"
+                style_pad_column="2"
+                scrollable="false" clickable="false"
+                style_bg_opa="0%">
+            <lv_label name="water_temp_val"
+                      bind_text="water_temp"
+                      bind_text-fmt="%d">
+                <style name="temp_large"/>
+            </lv_label>
+            <lv_label text="°C">
+                <style name="temp_unit"/>
+            </lv_label>
+        </lv_obj>
+
+        <!-- ── Target label ── -->
+        <lv_label text="TARGET 95°C" align="center" y="16">
+            <style name="target_text"/>
+        </lv_label>
+
+        <!-- ── State indicator ── -->
+        <lv_obj align="center" y="40"
+                width="content" height="content"
+                style_layout="flex"
+                style_flex_flow="row"
+                style_flex_cross_place="center"
+                style_pad_column="8"
+                scrollable="false" clickable="false"
+                style_bg_opa="0%">
+            <lv_obj width="6" height="6">
+                <style name="state_dot"/>
+            </lv_obj>
+            <lv_label bind_text="water_state">
+                <style name="state_text"/>
+            </lv_label>
+        </lv_obj>
+
+        <!-- ── Start / Stop button ──
+             Shows play icon; in C code this toggles to pause (red)
+             when water_running subject changes. -->
+        <lv_obj name="water_action_btn"
+                align="bottom_mid" y="-52"
+                width="#action_btn_size" height="#action_btn_size"
+                scrollable="false">
+            <style name="action_start"/>
+            <style name="action_start_pressed" selector="pressed"/>
+            <lv_label text="&#xF04B;" align="center"
+                      style_text_color="#c_bg"/>
+        </lv_obj>
+
+    </view>
+</screen>

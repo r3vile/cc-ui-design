@@ -1,0 +1,99 @@
+<globals>
+    <config name="espresso_ui" description="Espresso machine UI for 480x480 round display"/>
+
+    <!-- ── Constants ── -->
+    <consts>
+        <!-- Color palette -->
+        <color name="c_bg"          value="0x0A0A0A"/>
+        <color name="c_bg_light"    value="0x151515"/>
+        <color name="c_gold"        value="0xD4A054"/>
+        <color name="c_gold_dark"   value="0xB8863E"/>
+        <color name="c_orange"      value="0xE8934A"/>
+        <color name="c_blue"        value="0x5BA0D4"/>
+        <color name="c_blue_dark"   value="0x4080B8"/>
+        <color name="c_red"         value="0xD45B5B"/>
+        <color name="c_red_dark"    value="0xB84040"/>
+        <color name="c_white"       value="0xFFFFFF"/>
+
+        <!-- Layout -->
+        <px name="display_size"     value="480"/>
+        <px name="icon_btn_size"    value="72"/>
+        <px name="orbit_radius"     value="148"/>
+        <px name="ring_diameter"    value="320"/>
+        <px name="nav_btn_size"     value="44"/>
+        <px name="action_btn_size"  value="56"/>
+        <px name="coffee_icon_size" value="96"/>
+        <px name="arc_diameter"     value="420"/>
+        <px name="arc_width"        value="6"/>
+        <px name="dot_size"         value="6"/>
+        <px name="dot_active_w"     value="18"/>
+        <px name="nav_btn_y"        value="48"/>
+    </consts>
+
+    <!-- ── Global Styles ── -->
+    <styles>
+        <!-- Dark background for all screens -->
+        <style name="scr_bg"
+               bg_color="#c_bg"
+               bg_opa="100%"/>
+
+        <!-- Glass-morphism icon button -->
+        <style name="icon_btn"
+               radius="32767"
+               bg_color="#c_white"
+               bg_opa="4%"
+               border_width="1"
+               border_color="#c_white"
+               border_opa="8%"/>
+
+        <style name="icon_btn_pressed"
+               bg_color="#c_gold"
+               bg_opa="15%"
+               border_color="#c_gold"
+               border_opa="30%"/>
+
+        <!-- Navigation back button -->
+        <style name="nav_btn"
+               radius="32767"
+               bg_color="#c_white"
+               bg_opa="4%"
+               border_width="1"
+               border_color="#c_white"
+               border_opa="8%"/>
+
+        <style name="nav_btn_pressed"
+               bg_opa="10%"/>
+
+        <!-- Decorative ring -->
+        <style name="ring"
+               radius="32767"
+               border_width="1"
+               border_color="#c_white"
+               border_opa="3%"
+               bg_opa="0%"/>
+
+        <!-- Inactive pagination dot -->
+        <style name="dot"
+               radius="32767"
+               bg_color="#c_white"
+               bg_opa="15%"/>
+
+        <!-- Active pagination dot -->
+        <style name="dot_active"
+               radius="3"
+               bg_color="#c_gold"
+               bg_opa="100%"/>
+    </styles>
+
+    <!-- ── Data Subjects (for live data binding) ── -->
+    <subjects>
+        <int    name="steam_temp"       value="89"          help="Current steam boiler temperature"/>
+        <int    name="steam_target"     value="125"         help="Steam target temperature"/>
+        <string name="steam_state"      value="HEATING"     help="Steam boiler state text"/>
+        <int    name="water_temp"       value="78"          help="Current water temperature"/>
+        <int    name="water_target"     value="95"          help="Water target temperature"/>
+        <string name="water_state"      value="HEATING"     help="Water state text"/>
+        <int    name="water_running"    value="0"           help="1 if hot water is dispensing"/>
+    </subjects>
+
+</globals>

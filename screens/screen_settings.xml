@@ -1,0 +1,69 @@
+<!--
+    Settings Screen — Espresso Machine
+    Placeholder screen with a gear icon and "Coming soon" text.
+-->
+<screen permanent="true">
+
+    <styles>
+        <style name="gear_icon"
+               text_color="#c_white"
+               text_opa="12%"/>
+
+        <style name="title"
+               text_color="#c_white"
+               text_opa="20%"
+               text_letter_space="3"/>
+
+        <style name="subtitle"
+               text_color="#c_white"
+               text_opa="10%"
+               text_letter_space="1"/>
+    </styles>
+
+    <view>
+        <style name="scr_bg"/>
+
+        <!-- ── Back button ── -->
+        <lv_obj align="top_mid" y="#nav_btn_y"
+                width="#nav_btn_size" height="#nav_btn_size"
+                scrollable="false">
+            <style name="nav_btn"/>
+            <style name="nav_btn_pressed" selector="pressed"/>
+            <lv_label text="&#xF053;" align="center"
+                      style_text_color="#c_white"
+                      style_text_opa="50%"/>
+            <screen_load_event screen="screen_main"
+                               trigger="clicked"
+                               anim_type="move_right"
+                               duration="350"/>
+        </lv_obj>
+
+        <!-- ── Placeholder content ── -->
+        <lv_obj align="center"
+                width="content" height="content"
+                style_layout="flex"
+                style_flex_flow="column"
+                style_flex_main_place="center"
+                style_flex_cross_place="center"
+                style_pad_row="16"
+                scrollable="false" clickable="false"
+                style_bg_opa="0%">
+
+            <!-- Large gear icon -->
+            <lv_label text="&#xF013;">
+                <style name="gear_icon"/>
+            </lv_label>
+
+            <!-- Title -->
+            <lv_label text="SETTINGS">
+                <style name="title"/>
+            </lv_label>
+
+            <!-- Subtitle -->
+            <lv_label text="Coming soon">
+                <style name="subtitle"/>
+            </lv_label>
+        </lv_obj>
+
+    </view>
+</screen>
