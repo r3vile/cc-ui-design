@@ -1,166 +1,127 @@
 <globals>
-    <api>
-    </api>
+	<api />
 
-    <consts>
-        <!-- Color palette -->
-        <color name="c_bg"          value="0x0A0A0A"/>
-        <color name="c_bg_light"    value="0x151515"/>
-        <color name="c_gold"        value="0xD4A054"/>
-        <color name="c_gold_dark"   value="0xB8863E"/>
-        <color name="c_orange"      value="0xE8934A"/>
-        <color name="c_blue"        value="0x5BA0D4"/>
-        <color name="c_blue_dark"   value="0x4080B8"/>
-        <color name="c_red"         value="0xD45B5B"/>
-        <color name="c_red_dark"    value="0xB84040"/>
-        <color name="c_white"       value="0xFFFFFF"/>
+	<consts>
+		<!-- Color palette -->
+		<color name="c_bg" value="0x0A0A0A" />
+		<color name="c_bg_light" value="0x151515" />
+		<color name="c_gold" value="0xD4A054" />
+		<color name="c_gold_dark" value="0xB8863E" />
+		<color name="c_orange" value="0xE8934A" />
+		<color name="c_blue" value="0x5BA0D4" />
+		<color name="c_blue_dark" value="0x4080B8" />
+		<color name="c_red" value="0xD45B5B" />
+		<color name="c_red_dark" value="0xB84040" />
+		<color name="c_white" value="0xFFFFFF" />
 
-        <!-- Layout -->
-        <px name="display_size"     value="480"/>
-        <px name="icon_btn_size"    value="72"/>
-        <px name="orbit_radius"     value="148"/>
-        <px name="ring_diameter"    value="320"/>
-        <px name="nav_btn_size"     value="44"/>
-        <px name="action_btn_size"  value="56"/>
-        <px name="coffee_icon_size" value="96"/>
-        <px name="arc_diameter"     value="420"/>
-        <px name="arc_width"        value="6"/>
-        <px name="arc_width_lg"     value="10"/>
-        <px name="dot_size"         value="6"/>
-        <px name="dot_active_w"     value="18"/>
-        <px name="nav_btn_y"        value="48"/>
-    </consts>
+		<!-- Layout -->
+		<px name="display_size" value="480" />
+		<px name="icon_btn_size" value="72" />
+		<px name="orbit_radius" value="148" />
+		<px name="ring_diameter" value="320" />
+		<px name="nav_btn_size" value="44" />
+		<px name="action_btn_size" value="56" />
+		<px name="coffee_icon_size" value="96" />
+		<px name="arc_diameter" value="420" />
+		<px name="arc_width" value="6" />
+		<px name="arc_width_lg" value="10" />
+		<px name="dot_size" value="6" />
+		<px name="dot_active_w" value="18" />
+		<px name="nav_btn_y" value="48" />
+	</consts>
 
-    <styles>
-        <!-- Dark background for all screens -->
-        <style name="scr_bg"
-               bg_color="#c_bg"
-               bg_opa="100%"/>
+	<styles>
+		<!-- Dark background for all screens -->
+		<style name="scr_bg" bg_color="#c_bg" bg_opa="100%" />
 
-        <!-- Icon button (transparent — icons only, no background) -->
-        <style name="icon_btn"
-               bg_opa="0%"
-               border_width="0"/>
+		<!-- Icon button (transparent — icons only, no background) -->
+		<style name="icon_btn" bg_opa="0%" border_width="0" />
 
-        <style name="icon_btn_pressed"
-               bg_opa="0%"/>
+		<style name="icon_btn_pressed" bg_opa="0%" />
 
-        <!-- Navigation back button -->
-        <style name="nav_btn"
-               radius="32767"
-               bg_color="#c_white"
-               bg_opa="4%"
-               border_width="1"
-               border_color="#c_white"
-               border_opa="8%"/>
+		<!-- Navigation back button -->
+		<style
+			name="nav_btn"
+			radius="32767"
+			bg_color="#c_white"
+			bg_opa="4%"
+			border_width="1"
+			border_color="#c_white"
+			border_opa="8%"
+		/>
 
-        <style name="nav_btn_pressed"
-               bg_opa="10%"/>
+		<style name="nav_btn_pressed" bg_opa="10%" />
 
-        <!-- Decorative ring -->
-        <style name="ring"
-               radius="32767"
-               border_width="1"
-               border_color="#c_white"
-               border_opa="3%"
-               bg_opa="0%"/>
+		<!-- Decorative ring -->
+		<style name="ring" radius="32767" border_width="1" border_color="#c_white" border_opa="3%" bg_opa="0%" />
 
-        <!-- Pagination dots -->
-        <style name="dot"
-               radius="32767"
-               bg_color="#c_white"
-               bg_opa="15%"/>
+		<!-- Pagination dots -->
+		<style name="dot" radius="32767" bg_color="#c_white" bg_opa="15%" />
 
-        <style name="dot_active"
-               radius="3"
-               bg_color="#c_gold"
-               bg_opa="100%"/>
+		<style name="dot_active" radius="3" bg_color="#c_gold" bg_opa="100%" />
 
-        <!-- Arc: indicator part (orange, for steam) -->
-        <style name="arc_indicator_orange"
-               arc_width="6"
-               arc_color="#c_orange"
-               arc_opa="100%"
-               arc_rounded="true"/>
+		<!-- Arc: indicator part (orange, for steam) -->
+		<style name="arc_indicator_orange" arc_width="6" arc_color="#c_orange" arc_opa="100%" arc_rounded="true" />
 
-        <!-- Arc: indicator part (blue, for water & steam) -->
-        <style name="arc_indicator_blue"
-               arc_width="6"
-               arc_color="#c_blue"
-               arc_opa="100%"
-               arc_rounded="true"/>
+		<!-- Arc: indicator part (blue, for water & steam) -->
+		<style name="arc_indicator_blue" arc_width="6" arc_color="#c_blue" arc_opa="100%" arc_rounded="true" />
 
-        <!-- Arc: indicator part (blue, large width) -->
-        <style name="arc_indicator_blue_lg"
-               arc_width="10"
-               arc_color="#c_blue"
-               arc_opa="100%"
-               arc_rounded="true"/>
+		<!-- Arc: indicator part (blue, large width) -->
+		<style name="arc_indicator_blue_lg" arc_width="10" arc_color="#c_blue" arc_opa="100%" arc_rounded="true" />
 
-        <!-- Arc: hidden knob -->
-        <style name="arc_knob_hidden"
-               bg_opa="0%"
-               pad_all="0"/>
+		<!-- Arc: hidden knob -->
+		<style name="arc_knob_hidden" bg_opa="0%" pad_all="0" />
 
-        <!-- Icon image: normal state (dimmed white) -->
-        <style name="icon_img"
-               opa="55%"/>
+		<!-- Icon image: normal state (dimmed white) -->
+		<style name="icon_img" opa="100%" bg_color="#c_white" />
 
-        <!-- Icon image: pressed state (bright, recolored gold) -->
-        <style name="icon_img_pressed"
-               opa="100%"
-               image_recolor="#c_gold"
-               image_recolor_opa="100%"/>
+		<!-- Icon image: pressed state (bright, recolored gold) -->
+		<style name="icon_img_pressed" opa="100%" image_recolor="#c_gold" image_recolor_opa="100%" />
 
-        <!-- Icon image: gold tint (for coffee screen) -->
-        <style name="icon_img_gold"
-               image_recolor="#c_gold"
-               image_recolor_opa="100%"
-               opa="100%"/>
+		<!-- Icon image: gold tint (for coffee screen) -->
+		<style name="icon_img_gold" image_recolor="#c_gold" image_recolor_opa="100%" opa="100%" />
 
-        <!-- Back icon: dimmed -->
-        <style name="icon_back"
-               opa="50%"/>
+		<!-- Back icon: dimmed -->
+		<style name="icon_back" opa="50%" />
 
-        <!-- Action button icon: dark color on bright bg -->
-        <style name="icon_action_dark"
-               image_recolor="#c_bg"
-               image_recolor_opa="100%"
-               opa="100%"/>
+		<!-- Action button icon: dark color on bright bg -->
+		<style name="icon_action_dark" image_recolor="#c_bg" image_recolor_opa="100%" opa="100%" />
 
-        <!-- Invisible container (no bg, no border, no padding) -->
-        <style name="container"
-               bg_opa="0%"
-               border_width="0"
-               pad_all="0"/>
-    </styles>
+		<!-- Invisible container (no bg, no border, no padding) -->
+		<style name="container" bg_opa="0%" border_width="0" pad_all="0" />
+	</styles>
 
-    <subjects>
-        <int    name="steam_temp"       value="89"      help="Current steam boiler temperature"/>
-        <int    name="steam_target"     value="125"     help="Steam target temperature"/>
-        <string name="steam_state"      value="HEATING" help="Steam boiler state text"/>
-        <int    name="water_temp"       value="78"      help="Current water temperature"/>
-        <int    name="water_target"     value="95"      help="Water target temperature"/>
-        <string name="water_state"      value="HEATING" help="Water state text"/>
-        <int    name="water_running"    value="0"       help="1 if hot water is dispensing"/>
-    </subjects>
+	<subjects>
+		<int name="steam_temp" value="89" help="Current steam boiler temperature" />
+		<int name="steam_target" value="125" help="Steam target temperature" />
+		<string name="steam_state" value="HEATING" help="Steam boiler state text" />
+		<int name="water_temp" value="78" help="Current water temperature" />
+		<int name="water_target" value="95" help="Water target temperature" />
+		<string name="water_state" value="HEATING" help="Water state text" />
+		<int name="water_running" value="0" help="1 if hot water is dispensing" />
+	</subjects>
 
-    <images>
-        <!-- Main screen icons (48x48, white on transparent) -->
-        <data name="icon_coffee"   src_path="images/icon_coffee.png"   color-format="argb8888"/>
-        <data name="icon_steam"    src_path="images/icon_steam.png"    color-format="argb8888"/>
-        <data name="icon_water"    src_path="images/icon_water.png"    color-format="argb8888"/>
-        <data name="icon_settings" src_path="images/icon_settings.png" color-format="argb8888"/>
+	<images>
+		<!-- Main screen icons (48x48, white on transparent) -->
+		<data name="icon_coffee" src_path="images/icon_coffee.png" color_format="argb8888" />
+		<data name="icon_steam" src_path="images/icon_steam.png" color_format="argb8888" />
+		<data name="icon_water" src_path="images/icon_water.png" color_format="argb8888" />
+		<data name="icon_settings" src_path="images/icon_settings.png" color_format="argb8888" />
 
-        <!-- Navigation / action icons (32x32, white on transparent) -->
-        <data name="icon_back"     src_path="images/icon_back.png"     color-format="argb8888"/>
-        <data name="icon_play"     src_path="images/icon_play.png"     color-format="argb8888"/>
-        <data name="icon_pause"    src_path="images/icon_pause.png"    color-format="argb8888"/>
+		<!-- Navigation / action icons (32x32, white on transparent) -->
+		<data name="icon_back" src_path="images/icon_back.png" color_format="argb8888" />
+		<data name="icon_play" src_path="images/icon_play.png" color_format="argb8888" />
+		<data name="icon_pause" src_path="images/icon_pause.png" color_format="argb8888" />
 
-        <!-- Steam screen center icon (64x64, white on transparent) -->
-        <data name="steam_air_icon"  src_path="images/steam_air_icon.png" color-format="argb8888"/>
-    </images>
+		<!-- Steam screen center icon (64x64, white on transparent) -->
+		<data name="steam_air_icon" src_path="images/icon_steam.png" color_format="argb8888" />
+	</images>
 
-    <fonts>
-    </fonts>
+	<fonts>
+		<bin name="font_small" as_file="false" src_path="fonts/Montserrat_Medium.ttf" size="18" bpp="4" />
+
+		<bin name="font_medium" as_file="false" src_path="fonts/Montserrat_Medium.ttf" size="20" bpp="4" />
+
+		<bin name="font_huge" as_file="false" src_path="fonts/Montserrat_Medium.ttf" size="68" bpp="4" />
+	</fonts>
 </globals>
