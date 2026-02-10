@@ -25,6 +25,7 @@
         <px name="coffee_icon_size" value="96"/>
         <px name="arc_diameter"     value="420"/>
         <px name="arc_width"        value="6"/>
+        <px name="arc_width_lg"     value="10"/>
         <px name="dot_size"         value="6"/>
         <px name="dot_active_w"     value="18"/>
         <px name="nav_btn_y"        value="48"/>
@@ -82,9 +83,16 @@
                arc_opa="100%"
                arc_rounded="true"/>
 
-        <!-- Arc: indicator part (blue, for water) -->
+        <!-- Arc: indicator part (blue, for water & steam) -->
         <style name="arc_indicator_blue"
                arc_width="6"
+               arc_color="#c_blue"
+               arc_opa="100%"
+               arc_rounded="true"/>
+
+        <!-- Arc: indicator part (blue, large width) -->
+        <style name="arc_indicator_blue_lg"
+               arc_width="10"
                arc_color="#c_blue"
                arc_opa="100%"
                arc_rounded="true"/>
@@ -142,6 +150,10 @@
         <data name="icon_back"     src_path="images/icon_back.png"     color-format="argb8888"/>
         <data name="icon_play"     src_path="images/icon_play.png"     color-format="argb8888"/>
         <data name="icon_pause"    src_path="images/icon_pause.png"    color-format="argb8888"/>
+
+        <!-- SVG icons -->
+        <data name="steam_air_icon"  src_path="images/steam-air-icon.svg"/>
+        <data name="back_arrow_icon" src_path="images/back-arrow-icon.svg"/>
     </images>
 
     <fonts>
