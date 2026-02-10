@@ -1,14 +1,14 @@
 <!--
     Steam Screen — Espresso Machine
     Circular progress arc showing temperature approaching 125°C target.
-    Center: steam icon + large temperature reading + target label + state.
+    Center: steam icon + large temperature + target + state.
     No action button — user opens a manual steam valve.
 -->
 <screen permanent="true">
 
     <styles>
         <style name="steam_icon"
-               opa="90%"
+               opa="80%"
                image_recolor="#c_blue"
                image_recolor_opa="100%"/>
 
@@ -27,7 +27,8 @@
         <style name="state_dot"
                radius="32767"
                bg_color="#c_blue"
-               bg_opa="100%"/>
+               bg_opa="100%"
+               border_width="0"/>
 
         <style name="valve_hint"
                text_color="#c_white"
@@ -44,7 +45,7 @@
                 scrollable="false">
             <style name="nav_btn"/>
             <style name="nav_btn_pressed" selector="pressed"/>
-            <lv_image src="back_arrow_icon" align="center">
+            <lv_image src="icon_back" align="center">
                 <style name="icon_back"/>
             </lv_image>
             <screen_load_event screen="screen_main"
@@ -74,59 +75,39 @@
             <style name="arc_knob_hidden" selector="knob"/>
         </lv_arc>
 
-        <!-- ── Center content: icon + temp + target + state ── -->
-        <lv_obj align="center"
+        <!-- ── Steam air icon (centered, above temp) ── -->
+        <lv_image src="steam_air_icon" align="center" y="-50">
+            <style name="steam_icon"/>
+        </lv_image>
+
+        <!-- ── Current temperature (large, blue) ── -->
+        <lv_label name="steam_temp_val" align="center" y="20"
+                  bind_text="steam_temp"
+                  bind_text-fmt="%d°C">
+            <style name="temp_large"/>
+        </lv_label>
+
+        <!-- ── Target temperature (small, grey) ── -->
+        <lv_label text="/ 125°C" align="center" y="50">
+            <style name="target_text"/>
+        </lv_label>
+
+        <!-- ── State indicator (dot + text) ── -->
+        <lv_obj align="center" y="76"
                 width="content" height="content"
                 style_layout="flex"
-                style_flex_flow="column"
-                style_flex_main_place="center"
+                style_flex_flow="row"
                 style_flex_cross_place="center"
-                style_pad_row="4"
-                scrollable="false" clickable="false"
-                style_bg_opa="0%">
-
-            <!-- Steam air icon -->
-            <lv_image src="steam_air_icon">
-                <style name="steam_icon"/>
-            </lv_image>
-
-            <!-- Current temperature (large) -->
-            <lv_obj width="content" height="content"
-                    style_layout="flex"
-                    style_flex_flow="row"
-                    style_flex_cross_place="end"
-                    style_pad_column="2"
-                    scrollable="false" clickable="false"
-                    style_bg_opa="0%">
-                <lv_label name="steam_temp_val"
-                          bind_text="steam_temp"
-                          bind_text-fmt="%d°C">
-                    <style name="temp_large"/>
-                </lv_label>
+                style_pad_column="8"
+                scrollable="false" clickable="false">
+            <style name="container"/>
+            <lv_obj width="6" height="6">
+                <style name="state_dot"/>
             </lv_obj>
-
-            <!-- Target temperature (small, grey) -->
-            <lv_label text="/ 125°C">
-                <style name="target_text"/>
+            <lv_label name="steam_state_label"
+                      bind_text="steam_state">
+                <style name="state_text"/>
             </lv_label>
-
-            <!-- State indicator (dot + text) -->
-            <lv_obj width="content" height="content"
-                    style_layout="flex"
-                    style_flex_flow="row"
-                    style_flex_cross_place="center"
-                    style_pad_column="8"
-                    style_pad_top="8"
-                    scrollable="false" clickable="false"
-                    style_bg_opa="0%">
-                <lv_obj width="6" height="6">
-                    <style name="state_dot"/>
-                </lv_obj>
-                <lv_label name="steam_state_label"
-                          bind_text="steam_state">
-                    <style name="state_text"/>
-                </lv_label>
-            </lv_obj>
         </lv_obj>
 
         <!-- ── Valve hint ── -->

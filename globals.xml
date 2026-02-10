@@ -127,6 +127,12 @@
                image_recolor="#c_bg"
                image_recolor_opa="100%"
                opa="100%"/>
+
+        <!-- Invisible container (no bg, no border, no padding) -->
+        <style name="container"
+               bg_opa="0%"
+               border_width="0"
+               pad_all="0"/>
     </styles>
 
     <subjects>
@@ -151,9 +157,8 @@
         <data name="icon_play"     src_path="images/icon_play.png"     color-format="argb8888"/>
         <data name="icon_pause"    src_path="images/icon_pause.png"    color-format="argb8888"/>
 
-        <!-- SVG icons -->
-        <data name="steam_air_icon"  src_path="images/steam-air-icon.svg"/>
-        <data name="back_arrow_icon" src_path="images/back-arrow-icon.svg"/>
+        <!-- Steam screen center icon (64x64, white on transparent) -->
+        <data name="steam_air_icon"  src_path="images/steam_air_icon.png" color-format="argb8888"/>
     </images>
 
     <fonts>

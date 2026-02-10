@@ -234,6 +234,32 @@ def draw_pause():
     save(img, "icon_pause.png")
 
 
+# ─────────────────────────────────────────────
+# Steam air (large, for steam screen center)  (64x64)
+# Three rising vapor/steam curves with a horizontal base
+# ─────────────────────────────────────────────
+def draw_steam_air():
+    S = 64
+    img = Image.new("RGBA", (S, S), TRANSPARENT)
+    d = ImageDraw.Draw(img)
+    sw = 3
+
+    # Base bar
+    d.line([(10, 58), (54, 58)], fill=W, width=sw)
+
+    # Three wavy steam columns rising from base
+    for cx, phase in [(20, 0.0), (32, 1.5), (44, 0.8)]:
+        pts = []
+        for i in range(24):
+            t = i / 23.0
+            y = 54 - t * 48
+            x = cx + math.sin(t * math.pi * 2.5 + phase) * 5
+            pts.append((x, y))
+        d.line(pts, fill=W, width=sw, joint="curve")
+
+    save(img, "steam_air_icon.png")
+
+
 if __name__ == "__main__":
     print("Generating icons...")
     draw_coffee()
@@ -243,4 +269,5 @@ if __name__ == "__main__":
     draw_back()
     draw_play()
     draw_pause()
+    draw_steam_air()
     print("Done!")
