@@ -36,20 +36,13 @@
                bg_color="#c_bg"
                bg_opa="100%"/>
 
-        <!-- Glass-morphism icon button -->
+        <!-- Icon button (transparent — icons only, no background) -->
         <style name="icon_btn"
-               radius="32767"
-               bg_color="#c_white"
-               bg_opa="4%"
-               border_width="1"
-               border_color="#c_white"
-               border_opa="8%"/>
+               bg_opa="0%"
+               border_width="0"/>
 
         <style name="icon_btn_pressed"
-               bg_color="#c_gold"
-               bg_opa="15%"
-               border_color="#c_gold"
-               border_opa="30%"/>
+               bg_opa="0%"/>
 
         <!-- Navigation back button -->
         <style name="nav_btn"

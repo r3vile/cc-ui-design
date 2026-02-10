@@ -8,7 +8,7 @@
     <styles>
         <style name="icon_text"
                text_color="#c_white"
-               text_opa="55%"
+               text_opa="100%"
                text_letter_space="0"/>
 
         <style name="icon_text_pressed"
@@ -36,15 +36,15 @@
         </lv_label>
 
         <!-- ── Coffee button (top) ──
-             U+F0F4 is not in default LVGL symbols, using tint/droplet-style
-             icon approach: styled circle + label.
-             Replace with a proper image asset for production. -->
+             U+F0F3 (bell) used as placeholder; for a proper coffee cup icon,
+             generate a custom font including U+F0F4 (fa-coffee). -->
         <lv_obj name="btn_coffee" align="center" x="0" y="-148"
                 width="#icon_btn_size" height="#icon_btn_size"
                 scrollable="false">
             <style name="icon_btn"/>
             <style name="icon_btn_pressed" selector="pressed"/>
-            <lv_label text="&#xF0FC;" align="center">
+            <lv_label text="&#xF0F3;" align="center"
+                      style_text_font="montserrat_22">
                 <style name="icon_text"/>
                 <style name="icon_text_pressed" selector="pressed"/>
             </lv_label>
@@ -61,7 +61,8 @@
                 scrollable="false">
             <style name="icon_btn"/>
             <style name="icon_btn_pressed" selector="pressed"/>
-            <lv_label text="&#xF0E7;" align="center">
+            <lv_label text="&#xF0E7;" align="center"
+                      style_text_font="montserrat_22">
                 <style name="icon_text"/>
                 <style name="icon_text_pressed" selector="pressed"/>
             </lv_label>
@@ -78,7 +79,8 @@
                 scrollable="false">
             <style name="icon_btn"/>
             <style name="icon_btn_pressed" selector="pressed"/>
-            <lv_label text="&#xF043;" align="center">
+            <lv_label text="&#xF043;" align="center"
+                      style_text_font="montserrat_22">
                 <style name="icon_text"/>
                 <style name="icon_text_pressed" selector="pressed"/>
             </lv_label>
@@ -95,7 +97,8 @@
                 scrollable="false">
             <style name="icon_btn"/>
             <style name="icon_btn_pressed" selector="pressed"/>
-            <lv_label text="&#xF013;" align="center">
+            <lv_label text="&#xF013;" align="center"
+                      style_text_font="montserrat_22">
                 <style name="icon_text"/>
                 <style name="icon_text_pressed" selector="pressed"/>
             </lv_label>

@@ -75,8 +75,8 @@
                 width="#coffee_icon_size" height="#coffee_icon_size"
                 scrollable="false" clickable="false">
             <style name="coffee_icon_ring"/>
-            <!-- Cup-like symbol; replace with proper image for production -->
-            <lv_label text="&#xF0FC;" align="center"
+            <!-- Bell as placeholder; replace with custom font including U+F0F4 (fa-coffee) -->
+            <lv_label text="&#xF0F3;" align="center"
                       style_text_color="#c_gold"
                       style_text_opa="100%"/>
         </lv_obj>
