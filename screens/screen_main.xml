@@ -6,15 +6,6 @@
 <screen permanent="true">
 
     <styles>
-        <style name="icon_text"
-               text_color="#c_white"
-               text_opa="100%"
-               text_letter_space="0"/>
-
-        <style name="icon_text_pressed"
-               text_color="#c_gold"
-               text_opa="100%"/>
-
         <style name="logo"
                text_color="#c_gold"
                text_opa="70%"
@@ -35,73 +26,64 @@
             <style name="logo"/>
         </lv_label>
 
-        <!-- ── Coffee button (top) ──
-             U+F0F3 (bell) used as placeholder; for a proper coffee cup icon,
-             generate a custom font including U+F0F4 (fa-coffee). -->
+        <!-- ── Coffee button (top) ── -->
         <lv_obj name="btn_coffee" align="center" x="0" y="-148"
                 width="#icon_btn_size" height="#icon_btn_size"
                 scrollable="false">
             <style name="icon_btn"/>
             <style name="icon_btn_pressed" selector="pressed"/>
-            <lv_label text="&#xF0F3;" align="center"
-                      style_text_font="montserrat_22">
-                <style name="icon_text"/>
-                <style name="icon_text_pressed" selector="pressed"/>
-            </lv_label>
+            <lv_image src="icon_coffee" align="center">
+                <style name="icon_img"/>
+                <style name="icon_img_pressed" selector="pressed"/>
+            </lv_image>
             <screen_load_event screen="screen_coffee"
                                trigger="clicked"
                                anim_type="move_left"
                                duration="350"/>
         </lv_obj>
 
-        <!-- ── Steam button (right) ──
-             Using charge/bolt symbol &#xF0E7; -->
+        <!-- ── Steam button (right) ── -->
         <lv_obj name="btn_steam" align="center" x="148" y="0"
                 width="#icon_btn_size" height="#icon_btn_size"
                 scrollable="false">
             <style name="icon_btn"/>
             <style name="icon_btn_pressed" selector="pressed"/>
-            <lv_label text="&#xF0E7;" align="center"
-                      style_text_font="montserrat_22">
-                <style name="icon_text"/>
-                <style name="icon_text_pressed" selector="pressed"/>
-            </lv_label>
+            <lv_image src="icon_steam" align="center">
+                <style name="icon_img"/>
+                <style name="icon_img_pressed" selector="pressed"/>
+            </lv_image>
             <screen_load_event screen="screen_steam"
                                trigger="clicked"
                                anim_type="move_left"
                                duration="350"/>
         </lv_obj>
 
-        <!-- ── Hot Water button (bottom) ──
-             Using tint/droplet symbol &#xF043; -->
+        <!-- ── Hot Water button (bottom) ── -->
         <lv_obj name="btn_water" align="center" x="0" y="148"
                 width="#icon_btn_size" height="#icon_btn_size"
                 scrollable="false">
             <style name="icon_btn"/>
             <style name="icon_btn_pressed" selector="pressed"/>
-            <lv_label text="&#xF043;" align="center"
-                      style_text_font="montserrat_22">
-                <style name="icon_text"/>
-                <style name="icon_text_pressed" selector="pressed"/>
-            </lv_label>
+            <lv_image src="icon_water" align="center">
+                <style name="icon_img"/>
+                <style name="icon_img_pressed" selector="pressed"/>
+            </lv_image>
             <screen_load_event screen="screen_water"
                                trigger="clicked"
                                anim_type="move_left"
                                duration="350"/>
         </lv_obj>
 
-        <!-- ── Settings button (left) ──
-             Using gear symbol &#xF013; -->
+        <!-- ── Settings button (left) ── -->
         <lv_obj name="btn_settings" align="center" x="-148" y="0"
                 width="#icon_btn_size" height="#icon_btn_size"
                 scrollable="false">
             <style name="icon_btn"/>
             <style name="icon_btn_pressed" selector="pressed"/>
-            <lv_label text="&#xF013;" align="center"
-                      style_text_font="montserrat_22">
-                <style name="icon_text"/>
-                <style name="icon_text_pressed" selector="pressed"/>
-            </lv_label>
+            <lv_image src="icon_settings" align="center">
+                <style name="icon_img"/>
+                <style name="icon_img_pressed" selector="pressed"/>
+            </lv_image>
             <screen_load_event screen="screen_settings"
                                trigger="clicked"
                                anim_type="move_left"

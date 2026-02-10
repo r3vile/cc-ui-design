@@ -61,9 +61,9 @@
                 scrollable="false">
             <style name="nav_btn"/>
             <style name="nav_btn_pressed" selector="pressed"/>
-            <lv_label text="&#xF053;" align="center"
-                      style_text_color="#c_white"
-                      style_text_opa="50%"/>
+            <lv_image src="icon_back" align="center">
+                <style name="icon_back"/>
+            </lv_image>
             <screen_load_event screen="screen_main"
                                trigger="clicked"
                                anim_type="move_right"
@@ -75,10 +75,9 @@
                 width="#coffee_icon_size" height="#coffee_icon_size"
                 scrollable="false" clickable="false">
             <style name="coffee_icon_ring"/>
-            <!-- Bell as placeholder; replace with custom font including U+F0F4 (fa-coffee) -->
-            <lv_label text="&#xF0F3;" align="center"
-                      style_text_color="#c_gold"
-                      style_text_opa="100%"/>
+            <lv_image src="icon_coffee" align="center">
+                <style name="icon_img_gold"/>
+            </lv_image>
         </lv_obj>
 
         <!-- ── Coffee type name (roller for interactive selection) ── -->
@@ -130,8 +129,9 @@
                 scrollable="false">
             <style name="brew_btn"/>
             <style name="brew_btn_pressed" selector="pressed"/>
-            <lv_label text="&#xF04B;" align="center"
-                      style_text_color="#c_bg"/>
+            <lv_image src="icon_play" align="center">
+                <style name="icon_action_dark"/>
+            </lv_image>
         </lv_obj>
 
     </view>

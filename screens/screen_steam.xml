@@ -44,9 +44,9 @@
                 scrollable="false">
             <style name="nav_btn"/>
             <style name="nav_btn_pressed" selector="pressed"/>
-            <lv_label text="&#xF053;" align="center"
-                      style_text_color="#c_white"
-                      style_text_opa="50%"/>
+            <lv_image src="icon_back" align="center">
+                <style name="icon_back"/>
+            </lv_image>
             <screen_load_event screen="screen_main"
                                trigger="clicked"
                                anim_type="move_right"

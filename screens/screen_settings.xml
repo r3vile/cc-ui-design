@@ -6,8 +6,9 @@
 
     <styles>
         <style name="gear_icon"
-               text_color="#c_white"
-               text_opa="12%"/>
+               opa="12%"
+               image_recolor="#c_white"
+               image_recolor_opa="100%"/>
 
         <style name="title"
                text_color="#c_white"
@@ -29,9 +30,9 @@
                 scrollable="false">
             <style name="nav_btn"/>
             <style name="nav_btn_pressed" selector="pressed"/>
-            <lv_label text="&#xF053;" align="center"
-                      style_text_color="#c_white"
-                      style_text_opa="50%"/>
+            <lv_image src="icon_back" align="center">
+                <style name="icon_back"/>
+            </lv_image>
             <screen_load_event screen="screen_main"
                                trigger="clicked"
                                anim_type="move_right"
@@ -50,9 +51,9 @@
                 style_bg_opa="0%">
 
             <!-- Large gear icon -->
-            <lv_label text="&#xF013;">
+            <lv_image src="icon_settings">
                 <style name="gear_icon"/>
-            </lv_label>
+            </lv_image>
 
             <!-- Title -->
             <lv_label text="SETTINGS">

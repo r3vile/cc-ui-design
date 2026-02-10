@@ -93,6 +93,32 @@
         <style name="arc_knob_hidden"
                bg_opa="0%"
                pad_all="0"/>
+
+        <!-- Icon image: normal state (dimmed white) -->
+        <style name="icon_img"
+               opa="55%"/>
+
+        <!-- Icon image: pressed state (bright, recolored gold) -->
+        <style name="icon_img_pressed"
+               opa="100%"
+               image_recolor="#c_gold"
+               image_recolor_opa="100%"/>
+
+        <!-- Icon image: gold tint (for coffee screen) -->
+        <style name="icon_img_gold"
+               image_recolor="#c_gold"
+               image_recolor_opa="100%"
+               opa="100%"/>
+
+        <!-- Back icon: dimmed -->
+        <style name="icon_back"
+               opa="50%"/>
+
+        <!-- Action button icon: dark color on bright bg -->
+        <style name="icon_action_dark"
+               image_recolor="#c_bg"
+               image_recolor_opa="100%"
+               opa="100%"/>
     </styles>
 
     <subjects>
@@ -106,6 +132,16 @@
     </subjects>
 
     <images>
+        <!-- Main screen icons (48x48, white on transparent) -->
+        <data name="icon_coffee"   src_path="images/icon_coffee.png"   color-format="argb8888"/>
+        <data name="icon_steam"    src_path="images/icon_steam.png"    color-format="argb8888"/>
+        <data name="icon_water"    src_path="images/icon_water.png"    color-format="argb8888"/>
+        <data name="icon_settings" src_path="images/icon_settings.png" color-format="argb8888"/>
+
+        <!-- Navigation / action icons (32x32, white on transparent) -->
+        <data name="icon_back"     src_path="images/icon_back.png"     color-format="argb8888"/>
+        <data name="icon_play"     src_path="images/icon_play.png"     color-format="argb8888"/>
+        <data name="icon_pause"    src_path="images/icon_pause.png"    color-format="argb8888"/>
     </images>
 
     <fonts>
