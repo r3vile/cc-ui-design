@@ -1,9 +1,7 @@
 <project name="espresso_ui">
-    <folders>
-    </folders>
     <targets>
         <target name="esp32_round_480">
-            <display width="480" height="480" color_format="RGB565"/>
+            <display width="480" height="480"/>
         </target>
     </targets>
 </project>

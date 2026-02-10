@@ -59,20 +59,19 @@
         <lv_arc name="steam_arc"
                 align="center"
                 width="#arc_diameter" height="#arc_diameter"
-                bg_angles="135 45"
-                range="0 125"
+                bg_start_angle="135"
+                bg_end_angle="45"
+                start_angle="135"
+                min_value="0"
+                max_value="125"
                 value="89"
+                bind_value="steam_temp"
                 clickable="false"
                 style_arc_width="#arc_width"
                 style_arc_color="#c_white"
-                style_arc_opa="5%"
-                style_arc_width-indicator="#arc_width"
-                style_arc_color-indicator="#c_orange"
-                style_arc_opa-indicator="100%"
-                style_arc_rounded-indicator="true"
-                style_bg_opa-knob="0"
-                style_pad_all-knob="0">
-            <bind_value subject="steam_temp"/>
+                style_arc_opa="5%">
+            <style name="arc_indicator_orange" selector="indicator"/>
+            <style name="arc_knob_hidden" selector="knob"/>
         </lv_arc>
 
         <!-- ── Temperature display ── -->

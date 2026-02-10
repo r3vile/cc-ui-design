@@ -1,7 +1,7 @@
 <globals>
-    <config name="espresso_ui" description="Espresso machine UI for 480x480 round display"/>
+    <api>
+    </api>
 
-    <!-- ── Constants ── -->
     <consts>
         <!-- Color palette -->
         <color name="c_bg"          value="0x0A0A0A"/>
@@ -30,7 +30,6 @@
         <px name="nav_btn_y"        value="48"/>
     </consts>
 
-    <!-- ── Global Styles ── -->
     <styles>
         <!-- Dark background for all screens -->
         <style name="scr_bg"
@@ -72,28 +71,50 @@
                border_opa="3%"
                bg_opa="0%"/>
 
-        <!-- Inactive pagination dot -->
+        <!-- Pagination dots -->
         <style name="dot"
                radius="32767"
                bg_color="#c_white"
                bg_opa="15%"/>
 
-        <!-- Active pagination dot -->
         <style name="dot_active"
                radius="3"
                bg_color="#c_gold"
                bg_opa="100%"/>
+
+        <!-- Arc: indicator part (orange, for steam) -->
+        <style name="arc_indicator_orange"
+               arc_width="6"
+               arc_color="#c_orange"
+               arc_opa="100%"
+               arc_rounded="true"/>
+
+        <!-- Arc: indicator part (blue, for water) -->
+        <style name="arc_indicator_blue"
+               arc_width="6"
+               arc_color="#c_blue"
+               arc_opa="100%"
+               arc_rounded="true"/>
+
+        <!-- Arc: hidden knob -->
+        <style name="arc_knob_hidden"
+               bg_opa="0%"
+               pad_all="0"/>
     </styles>
 
-    <!-- ── Data Subjects (for live data binding) ── -->
     <subjects>
-        <int    name="steam_temp"       value="89"          help="Current steam boiler temperature"/>
-        <int    name="steam_target"     value="125"         help="Steam target temperature"/>
-        <string name="steam_state"      value="HEATING"     help="Steam boiler state text"/>
-        <int    name="water_temp"       value="78"          help="Current water temperature"/>
-        <int    name="water_target"     value="95"          help="Water target temperature"/>
-        <string name="water_state"      value="HEATING"     help="Water state text"/>
-        <int    name="water_running"    value="0"           help="1 if hot water is dispensing"/>
+        <int    name="steam_temp"       value="89"      help="Current steam boiler temperature"/>
+        <int    name="steam_target"     value="125"     help="Steam target temperature"/>
+        <string name="steam_state"      value="HEATING" help="Steam boiler state text"/>
+        <int    name="water_temp"       value="78"      help="Current water temperature"/>
+        <int    name="water_target"     value="95"      help="Water target temperature"/>
+        <string name="water_state"      value="HEATING" help="Water state text"/>
+        <int    name="water_running"    value="0"       help="1 if hot water is dispensing"/>
     </subjects>
 
+    <images>
+    </images>
+
+    <fonts>
+    </fonts>
 </globals>
