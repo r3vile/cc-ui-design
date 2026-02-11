@@ -17,13 +17,13 @@
 		<style name="style_bg" />
 
 		<!-- Back button -->
-		<back_button align="top_left" x="60" y="45">
+		<back_button align="center" x="-135" y="-130">
 			<screen_load_event screen="screen_main"
 				anim_type="fade_in" duration="300" />
 		</back_button>
 
 		<!-- Title -->
-		<lv_label text="Settings" align="top_mid" y="50">
+		<lv_label text="Settings" align="center" y="-130">
 			<style name="style_title" />
 		</lv_label>
 

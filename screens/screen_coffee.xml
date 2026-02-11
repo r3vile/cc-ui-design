@@ -32,18 +32,18 @@
 		<style name="style_bg" />
 
 		<!-- Back button -->
-		<back_button align="top_left" x="60" y="45">
+		<back_button align="center" x="-135" y="-130">
 			<screen_load_event screen="screen_main"
 				anim_type="fade_in" duration="300" />
 		</back_button>
 
 		<!-- Title -->
-		<lv_label text="Coffee" align="top_mid" y="50">
+		<lv_label text="Coffee" align="center" y="-130">
 			<style name="style_title" />
 		</lv_label>
 
 		<!-- Horizontally scrollable coffee types -->
-		<lv_obj align="center" y="-10" width="380" height="160">
+		<lv_obj align="center" y="10" width="340" height="160">
 			<style name="style_scroll_container" />
 
 			<coffee_type_card icon="icon_espresso" label="Espresso" />
@@ -53,7 +53,7 @@
 		</lv_obj>
 
 		<!-- Play / Start button -->
-		<lv_button align="bottom_mid" y="-70">
+		<lv_button align="center" y="155">
 			<remove_style_all />
 			<style name="style_play_btn" />
 			<style name="style_play_pressed" selector="pressed" />
