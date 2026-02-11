@@ -4,8 +4,9 @@
 		<prop name="arc_min" type="int" default="0" />
 		<prop name="arc_max" type="int" default="150" />
 		<prop name="temp_subject" type="string" default="steam_temp_current" />
-		<prop name="state_subject" type="string" default="steam_state" />
-		<prop name="target_subject" type="string" default="steam_temp_target" />
+		<prop name="temp_text" type="string" default="25°C" />
+		<prop name="state_text" type="string" default="Idle" />
+		<prop name="target_text" type="string" default="Target: 125°C" />
 	</api>
 
 	<styles>
@@ -57,13 +58,14 @@
 			<lv_image src="$icon">
 				<style name="style_icon" />
 			</lv_image>
-			<lv_label subject="$temp_subject" fmt="%d°C">
+			<!-- Label observers set up in C via lv_label_bind_text() -->
+			<lv_label text="$temp_text">
 				<style name="style_temp" />
 			</lv_label>
-			<lv_label subject="$state_subject">
+			<lv_label text="$state_text">
 				<style name="style_state" />
 			</lv_label>
-			<lv_label subject="$target_subject" fmt="Target: %d°C">
+			<lv_label text="$target_text">
 				<style name="style_target" />
 			</lv_label>
 		</lv_obj>

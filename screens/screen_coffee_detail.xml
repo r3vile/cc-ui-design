@@ -83,16 +83,16 @@
 			<style name="style_knob_hide" selector="knob" />
 		</lv_arc>
 
-		<!-- Left arc readout (temperature) -->
-		<lv_label subject="coffee_temp_current" fmt="%d°C" align="center" x="-163" y="-8">
+		<!-- Left arc readout — C binds to coffee_temp_current, fmt "%d°C" -->
+		<lv_label text="25°C" align="center" x="-163" y="-8">
 			<style name="style_readout_value" />
 		</lv_label>
 		<lv_label text="temp" align="center" x="-163" y="8">
 			<style name="style_readout_label" />
 		</lv_label>
 
-		<!-- Right arc readout (brew time) -->
-		<lv_label subject="coffee_brew_time" fmt="%ds" align="center" x="163" y="-8">
+		<!-- Right arc readout — C binds to coffee_brew_time, fmt "%ds" -->
+		<lv_label text="0s" align="center" x="163" y="-8">
 			<style name="style_readout_value" />
 		</lv_label>
 		<lv_label text="time" align="center" x="163" y="8">
@@ -106,10 +106,12 @@
 			<lv_image src="icon_espresso">
 				<style name="style_icon" />
 			</lv_image>
-			<lv_label subject="coffee_name">
+			<!-- C binds to coffee_name -->
+			<lv_label text="Espresso">
 				<style name="style_name" />
 			</lv_label>
-			<lv_label subject="coffee_state">
+			<!-- C binds to coffee_state -->
+			<lv_label text="Idle">
 				<style name="style_param" />
 			</lv_label>
 			<lv_label text="93°C · 25s · 36g">

@@ -14,8 +14,9 @@
 			icon="icon_steam"
 			arc_min="0" arc_max="150"
 			temp_subject="steam_temp_current"
-			state_subject="steam_state"
-			target_subject="steam_temp_target"
+			temp_text="25°C"
+			state_text="Idle"
+			target_text="Target: 125°C"
 		/>
 	</view>
 </screen>
