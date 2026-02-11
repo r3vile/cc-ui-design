@@ -55,6 +55,13 @@
 		<int name="water_temp" value="25" />
 		<string name="water_state" value="Idle" />
 		<int name="water_running" value="0" />
+
+		<!-- Coffee -->
+		<int name="coffee_temp" value="25" />
+		<string name="coffee_state" value="Idle" />
+		<int name="coffee_brew_time" value="0" />
+		<string name="coffee_name" value="Espresso" />
+		<int name="coffee_selected" value="0" />
 	</subjects>
 
 	<images>
