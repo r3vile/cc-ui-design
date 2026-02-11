@@ -13,9 +13,9 @@
 		<temp_gauge
 			icon="icon_steam"
 			arc_min="0" arc_max="150"
-			temp_subject="steam_temp"
+			temp_subject="steam_temp_current"
 			state_subject="steam_state"
-			target_text="Target: 125°C"
+			target_subject="steam_temp_target"
 		/>
 	</view>
 </screen>

@@ -13,9 +13,9 @@
 		<temp_gauge
 			icon="icon_water"
 			arc_min="0" arc_max="100"
-			temp_subject="water_temp"
+			temp_subject="water_temp_current"
 			state_subject="water_state"
-			target_text="Target: 95°C"
+			target_subject="water_temp_target"
 		/>
 	</view>
 </screen>
