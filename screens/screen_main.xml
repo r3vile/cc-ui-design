@@ -1,0 +1,53 @@
+<screen permanent="true">
+	<styles>
+		<style name="style_bg"
+			bg_color="#bg_primary" bg_opa="100%"
+			width="480" height="480"
+			radius="240" border_width="0" pad_all="0"
+		/>
+		<style name="style_icon_label"
+			text_color="#text_secondary" text_font="font_tiny"
+			text_align="center"
+		/>
+	</styles>
+
+	<view style_layout="none">
+		<style name="style_bg" />
+
+		<!-- Coffee (top) -->
+		<nav_icon_button icon="icon_coffee" align="center" y="-110">
+			<screen_create_event screen="screen_coffee"
+				anim_type="fade_in" duration="300" />
+		</nav_icon_button>
+		<lv_label text="Coffee" align="center" y="-55">
+			<style name="style_icon_label" />
+		</lv_label>
+
+		<!-- Steam (left) -->
+		<nav_icon_button icon="icon_steam" align="center" x="-110">
+			<screen_create_event screen="screen_steam"
+				anim_type="fade_in" duration="300" />
+		</nav_icon_button>
+		<lv_label text="Steam" align="center" x="-110" y="55">
+			<style name="style_icon_label" />
+		</lv_label>
+
+		<!-- Hot Water (right) -->
+		<nav_icon_button icon="icon_water" align="center" x="110">
+			<screen_create_event screen="screen_water"
+				anim_type="fade_in" duration="300" />
+		</nav_icon_button>
+		<lv_label text="Water" align="center" x="110" y="55">
+			<style name="style_icon_label" />
+		</lv_label>
+
+		<!-- Settings (bottom) -->
+		<nav_icon_button icon="icon_settings" align="center" y="110">
+			<screen_create_event screen="screen_settings"
+				anim_type="fade_in" duration="300" />
+		</nav_icon_button>
+		<lv_label text="Settings" align="center" y="165">
+			<style name="style_icon_label" />
+		</lv_label>
+	</view>
+</screen>

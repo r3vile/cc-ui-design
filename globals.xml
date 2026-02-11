@@ -1,0 +1,93 @@
+<globals>
+	<api>
+	</api>
+
+	<consts>
+		<!-- Spacing -->
+		<int name="unit_xs" value="4" />
+		<int name="unit_sm" value="8" />
+		<int name="unit_md" value="16" />
+		<int name="unit_lg" value="24" />
+		<int name="unit_xl" value="40" />
+
+		<!-- Colors -->
+		<color name="bg_primary" value="0x0C0C0E" />
+		<color name="bg_secondary" value="0x1A1A1F" />
+		<color name="bg_tertiary" value="0x26262E" />
+		<color name="text_primary" value="0xF0F0F2" />
+		<color name="text_secondary" value="0x8A8A96" />
+		<color name="text_tertiary" value="0x55555F" />
+		<color name="accent" value="0xD4A574" />
+		<color name="accent_dim" value="0x6B5338" />
+		<color name="success" value="0x4ADE80" />
+		<color name="warning" value="0xFBBF24" />
+		<color name="danger" value="0xEF4444" />
+	</consts>
+
+	<styles>
+		<!-- Screen background for round display -->
+		<style name="style_screen_bg"
+			width="480" height="480"
+			bg_color="#bg_primary" bg_opa="100%"
+			radius="240" border_width="0" pad_all="0"
+		/>
+
+		<!-- Arc background track -->
+		<style name="style_arc_bg"
+			arc_color="#accent_dim" arc_width="12" arc_rounded="true"
+		/>
+
+		<!-- Arc active indicator -->
+		<style name="style_arc_indicator"
+			arc_color="#accent" arc_width="12" arc_rounded="true"
+		/>
+
+		<!-- Hidden arc knob -->
+		<style name="style_arc_knob_hidden"
+			bg_opa="0" pad_all="0"
+		/>
+	</styles>
+
+	<subjects>
+		<!-- Steam -->
+		<int name="steam_temp" value="25" />
+		<string name="steam_state" value="Idle" />
+
+		<!-- Hot water -->
+		<int name="water_temp" value="25" />
+		<string name="water_state" value="Idle" />
+		<int name="water_running" value="0" />
+	</subjects>
+
+	<images>
+		<!-- Main menu icons -->
+		<file name="icon_coffee" src_path="images/icon_coffee.png" />
+		<file name="icon_steam" src_path="images/icon_steam.png" />
+		<file name="icon_water" src_path="images/icon_water.png" />
+		<file name="icon_settings" src_path="images/icon_settings.png" />
+
+		<!-- Navigation icons -->
+		<file name="icon_back" src_path="images/icon_back.png" />
+		<file name="icon_play" src_path="images/icon_play.png" />
+		<file name="icon_stop" src_path="images/icon_stop.png" />
+
+		<!-- Coffee type icons -->
+		<file name="icon_espresso" src_path="images/icon_espresso.png" />
+		<file name="icon_cappuccino" src_path="images/icon_cappuccino.png" />
+		<file name="icon_lungo" src_path="images/icon_lungo.png" />
+		<file name="icon_americano" src_path="images/icon_americano.png" />
+	</images>
+
+	<fonts>
+		<tiny_ttf name="font_display" size="56" as_file="true"
+			src_path="fonts/Montserrat/Montserrat-Light.ttf" />
+		<tiny_ttf name="font_heading" size="24" as_file="true"
+			src_path="fonts/Montserrat/Montserrat-SemiBold.ttf" />
+		<tiny_ttf name="font_body" size="16" as_file="true"
+			src_path="fonts/Montserrat/Montserrat-Medium.ttf" />
+		<tiny_ttf name="font_caption" size="12" as_file="true"
+			src_path="fonts/Montserrat/Montserrat-Regular.ttf" />
+		<tiny_ttf name="font_tiny" size="11" as_file="true"
+			src_path="fonts/Montserrat/Montserrat-Medium.ttf" />
+	</fonts>
+</globals>

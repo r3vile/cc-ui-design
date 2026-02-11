@@ -1,0 +1,35 @@
+<screen>
+	<styles>
+		<style name="style_bg"
+			bg_color="#bg_primary" bg_opa="100%"
+			width="480" height="480"
+			radius="240" border_width="0" pad_all="0"
+		/>
+		<style name="style_title"
+			text_color="#text_primary" text_font="font_heading"
+		/>
+		<style name="style_placeholder"
+			text_color="#text_tertiary" text_font="font_body"
+		/>
+	</styles>
+
+	<view style_layout="none">
+		<style name="style_bg" />
+
+		<!-- Back button -->
+		<back_button align="top_left" x="60" y="45">
+			<screen_load_event screen="screen_main"
+				anim_type="fade_in" duration="300" />
+		</back_button>
+
+		<!-- Title -->
+		<lv_label text="Settings" align="top_mid" y="50">
+			<style name="style_title" />
+		</lv_label>
+
+		<!-- Placeholder -->
+		<lv_label text="Coming soon" align="center">
+			<style name="style_placeholder" />
+		</lv_label>
+	</view>
+</screen>

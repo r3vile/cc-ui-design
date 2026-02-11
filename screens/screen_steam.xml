@@ -1,0 +1,88 @@
+<screen>
+	<styles>
+		<style name="style_bg"
+			bg_color="#bg_primary" bg_opa="100%"
+			width="480" height="480"
+			radius="240" border_width="0" pad_all="0"
+		/>
+		<style name="style_title"
+			text_color="#text_primary" text_font="font_heading"
+		/>
+		<style name="style_arc_bg"
+			arc_color="#accent_dim" arc_width="12" arc_rounded="true"
+		/>
+		<style name="style_arc_ind"
+			arc_color="#accent" arc_width="12" arc_rounded="true"
+		/>
+		<style name="style_knob_hide"
+			bg_opa="0" pad_all="0"
+		/>
+		<style name="style_temp"
+			text_color="#text_primary" text_font="font_display"
+			text_align="center"
+		/>
+		<style name="style_unit"
+			text_color="#text_secondary" text_font="font_body"
+			text_align="center"
+		/>
+		<style name="style_state"
+			text_color="#text_secondary" text_font="font_body"
+			text_align="center"
+		/>
+		<style name="style_target"
+			text_color="#text_tertiary" text_font="font_caption"
+			text_align="center"
+		/>
+		<style name="style_center_col"
+			bg_opa="0" border_width="0"
+			width="content" height="content"
+			layout="flex" flex_flow="column"
+			flex_cross_place="center"
+			pad_row="4"
+		/>
+	</styles>
+
+	<view style_layout="none">
+		<style name="style_bg" />
+
+		<!-- Back button -->
+		<back_button align="top_left" x="60" y="45">
+			<screen_load_event screen="screen_main"
+				anim_type="fade_in" duration="300" />
+		</back_button>
+
+		<!-- Title -->
+		<lv_label text="Steam" align="top_mid" y="50">
+			<style name="style_title" />
+		</lv_label>
+
+		<!-- Temperature arc gauge -->
+		<lv_arc
+			width="300" height="300"
+			align="center" y="10"
+			min_value="0" max_value="150"
+			value="25"
+			bg_start_angle="135" bg_end_angle="45"
+			mode="normal"
+		>
+			<style name="style_arc_bg" selector="main" />
+			<style name="style_arc_ind" selector="indicator" />
+			<style name="style_knob_hide" selector="knob" />
+		</lv_arc>
+
+		<!-- Center info overlay -->
+		<lv_obj align="center" y="10">
+			<style name="style_center_col" />
+
+			<lv_label text="25°C">
+				<style name="style_temp" />
+			</lv_label>
+			<lv_label text="Idle">
+				<style name="style_state" />
+			</lv_label>
+			<lv_label text="Target: 125°C">
+				<style name="style_target" />
+			</lv_label>
+		</lv_obj>
+	</view>
+</screen>

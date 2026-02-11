@@ -1,0 +1,7 @@
+<project name="espresso_ui">
+	<targets>
+		<target name="esp32_round">
+			<display width="480" height="480" />
+		</target>
+	</targets>
+</project>
