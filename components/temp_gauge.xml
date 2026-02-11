@@ -12,6 +12,17 @@
 		<style name="style_knob_hide" bg_opa="0" pad_all="0" />
 		<style name="style_icon" image_recolor="#accent" image_recolor_opa="100%" />
 		<style name="style_temp" text_color="#text_primary" text_font="font_display" text_align="center" />
+		<style
+			name="style_temp_row"
+			bg_opa="0"
+			border_width="0"
+			width="content"
+			height="content"
+			layout="flex"
+			flex_flow="row"
+			flex_cross_place="end"
+			pad_column="0"
+		/>
 		<style name="style_state" text_color="#text_secondary" text_font="font_body" text_align="center" />
 		<style name="style_target" text_color="#text_tertiary" text_font="font_caption" text_align="center" />
 		<style
@@ -54,9 +65,15 @@
 			<lv_image src="$icon">
 				<style name="style_icon" />
 			</lv_image>
-			<lv_label bind_text="temp_text">
-				<style name="style_temp" />
-			</lv_label>
+			<lv_obj>
+				<style name="style_temp_row" />
+				<lv_label bind_text="temp_current">
+					<style name="style_temp" />
+				</lv_label>
+				<lv_label text="°C">
+					<style name="style_temp" />
+				</lv_label>
+			</lv_obj>
 			<lv_label bind_text="state">
 				<style name="style_state" />
 			</lv_label>

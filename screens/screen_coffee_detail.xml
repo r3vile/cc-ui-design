@@ -36,6 +36,13 @@
 		/>
 
 		<!-- Arc readout labels -->
+		<style name="style_readout_row"
+			bg_opa="0" border_width="0"
+			width="content" height="content"
+			layout="flex" flex_flow="row"
+			flex_cross_place="end"
+			pad_column="0"
+		/>
 		<style name="style_readout_value"
 			text_color="#text_secondary" text_font="font_caption"
 			text_align="center"
@@ -84,9 +91,15 @@
 		</lv_arc>
 
 		<!-- Left arc readout -->
-		<lv_label bind_text="temp_text" align="center" x="-163" y="-8">
-			<style name="style_readout_value" />
-		</lv_label>
+		<lv_obj align="center" x="-163" y="-8">
+			<style name="style_readout_row" />
+			<lv_label bind_text="temp_current">
+				<style name="style_readout_value" />
+			</lv_label>
+			<lv_label text="°C">
+				<style name="style_readout_value" />
+			</lv_label>
+		</lv_obj>
 		<lv_label text="temp" align="center" x="-163" y="8">
 			<style name="style_readout_label" />
 		</lv_label>

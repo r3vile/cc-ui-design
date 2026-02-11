@@ -50,7 +50,6 @@
 		<!-- Shared temperature (firmware sets per active mode) -->
 		<int name="temp_current" value="25" />
 		<int name="temp_target" value="125" />
-		<string name="temp_text" value="25°C" />
 		<string name="target_text" value="Target: 125°C" />
 		<string name="state" value="Idle" />
 
