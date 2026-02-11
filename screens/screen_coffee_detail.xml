@@ -51,7 +51,7 @@
 
 		<!-- Back button (top center) -->
 		<back_button align="center" y="-170">
-			<screen_load_event screen="screen_coffee"
+			<screen_create_event screen="screen_coffee"
 				anim_type="fade_in" duration="300" />
 		</back_button>
 
