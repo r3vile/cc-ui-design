@@ -1,48 +1,46 @@
 <screen>
 	<styles>
-		<style name="style_bg"
-			bg_color="#bg_primary" bg_opa="100%"
-			width="480" height="480"
-			radius="240" border_width="0" pad_all="0"
+		<style
+			name="style_bg"
+			bg_color="#bg_primary"
+			bg_opa="100%"
+			width="480"
+			height="480"
+			radius="240"
+			border_width="0"
+			pad_all="0"
 		/>
 
 		<!-- Flex column for icon + label -->
-		<style name="style_item_col"
-			bg_opa="0" border_width="0"
-			width="content" height="content"
-			layout="flex" flex_flow="column"
+		<style
+			name="style_item_col"
+			bg_opa="0"
+			border_width="0"
+			width="content"
+			height="content"
+			layout="flex"
+			flex_flow="column"
 			flex_cross_place="center"
 			pad_row="8"
 		/>
 
 		<!-- Selected item (top center, prominent) -->
-		<style name="style_icon_selected"
-			image_recolor="#accent" image_recolor_opa="100%"
-			transform_scale_x="384" transform_scale_y="384"
-		/>
-		<style name="style_label_selected"
-			text_color="#text_primary" text_font="font_body"
-			text_align="center"
-		/>
+		<style name="style_icon_selected" image_recolor="#accent" image_recolor_opa="100%" />
+		<style name="style_label_selected" text_color="#text_primary" text_font="font_body" text_align="center" />
 
 		<!-- Normal item (left / right) -->
-		<style name="style_icon_normal"
-			image_recolor="#accent" image_recolor_opa="60%"
-		/>
-		<style name="style_label_normal"
-			text_color="#text_secondary" text_font="font_caption"
-			text_align="center"
-		/>
+		<style name="style_icon_normal" image_recolor="#accent" image_recolor_opa="60%" />
+		<style name="style_label_normal" text_color="#text_secondary" text_font="font_caption" text_align="center" />
 
 		<!-- Dim item (bottom, far) -->
-		<style name="style_icon_dim"
-			image_recolor="#accent" image_recolor_opa="30%"
-			transform_scale_x="192" transform_scale_y="192"
+		<style
+			name="style_icon_dim"
+			image_recolor="#accent"
+			image_recolor_opa="30%"
+			transform_scale_x="192"
+			transform_scale_y="192"
 		/>
-		<style name="style_label_dim"
-			text_color="#text_tertiary" text_font="font_tiny"
-			text_align="center"
-		/>
+		<style name="style_label_dim" text_color="#text_tertiary" text_font="font_tiny" text_align="center" />
 	</styles>
 
 	<view style_layout="none">
@@ -50,8 +48,7 @@
 
 		<!-- Back button (top center) -->
 		<back_button align="center" y="-170">
-			<screen_load_event screen="screen_main"
-				anim_type="fade_in" duration="300" />
+			<screen_load_event screen="screen_main" anim_type="fade_in" duration="300" />
 		</back_button>
 
 		<!-- Circular coffee selector — firmware rotates positions on input -->

@@ -1,6 +1,5 @@
 <globals>
-	<api>
-	</api>
+	<api />
 
 	<consts>
 		<!-- Spacing -->
@@ -26,26 +25,25 @@
 
 	<styles>
 		<!-- Screen background for round display -->
-		<style name="style_screen_bg"
-			width="480" height="480"
-			bg_color="#bg_primary" bg_opa="100%"
-			radius="240" border_width="0" pad_all="0"
+		<style
+			name="style_screen_bg"
+			width="480"
+			height="480"
+			bg_color="#bg_primary"
+			bg_opa="100%"
+			radius="240"
+			border_width="0"
+			pad_all="0"
 		/>
 
 		<!-- Arc background track -->
-		<style name="style_arc_bg"
-			arc_color="#accent_dim" arc_width="12" arc_rounded="true"
-		/>
+		<style name="style_arc_bg" arc_color="#accent_dim" arc_width="12" arc_rounded="true" />
 
 		<!-- Arc active indicator -->
-		<style name="style_arc_indicator"
-			arc_color="#accent" arc_width="12" arc_rounded="true"
-		/>
+		<style name="style_arc_indicator" arc_color="#accent" arc_width="12" arc_rounded="true" />
 
 		<!-- Hidden arc knob -->
-		<style name="style_arc_knob_hidden"
-			bg_opa="0" pad_all="0"
-		/>
+		<style name="style_arc_knob_hidden" bg_opa="0" pad_all="0" />
 	</styles>
 
 	<subjects>
@@ -79,15 +77,10 @@
 	</images>
 
 	<fonts>
-		<tiny_ttf name="font_display" size="56" as_file="true"
-			src_path="fonts/Montserrat/Montserrat-Light.ttf" />
-		<tiny_ttf name="font_heading" size="24" as_file="true"
-			src_path="fonts/Montserrat/Montserrat-SemiBold.ttf" />
-		<tiny_ttf name="font_body" size="16" as_file="true"
-			src_path="fonts/Montserrat/Montserrat-Medium.ttf" />
-		<tiny_ttf name="font_caption" size="12" as_file="true"
-			src_path="fonts/Montserrat/Montserrat-Regular.ttf" />
-		<tiny_ttf name="font_tiny" size="11" as_file="true"
-			src_path="fonts/Montserrat/Montserrat-Medium.ttf" />
+		<tiny_ttf name="font_display" size="56" as_file="true" src_path="fonts/Montserrat/Montserrat-Light.ttf" />
+		<tiny_ttf name="font_heading" size="24" as_file="true" src_path="fonts/Montserrat/Montserrat-SemiBold.ttf" />
+		<tiny_ttf name="font_body" size="16" as_file="true" src_path="fonts/Montserrat/Montserrat-Medium.ttf" />
+		<tiny_ttf name="font_caption" size="12" as_file="true" src_path="fonts/Montserrat/Montserrat-Regular.ttf" />
+		<tiny_ttf name="font_tiny" size="11" as_file="true" src_path="fonts/Montserrat/Montserrat-Medium.ttf" />
 	</fonts>
 </globals>
