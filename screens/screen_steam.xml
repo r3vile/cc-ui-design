@@ -13,7 +13,7 @@
 		<temp_gauge
 			icon="icon_steam"
 			arc_min="0" arc_max="150"
-			temp_subject="steam_temp_current"
+			arc_value="25"
 			temp_text="25°C"
 			state_text="Idle"
 			target_text="Target: 125°C"

@@ -56,11 +56,12 @@
 		</back_button>
 
 		<!-- Left arc: Current temperature (fills bottom → top) -->
+		<!-- C binds value to coffee_temp_current -->
 		<lv_arc
 			width="450" height="450"
 			align="center"
 			min_value="0" max_value="93"
-			subject="coffee_temp_current"
+			value="25"
 			bg_start_angle="120" bg_end_angle="240"
 			mode="normal"
 		>
@@ -70,11 +71,12 @@
 		</lv_arc>
 
 		<!-- Right arc: Brew progress (fills top → bottom) -->
+		<!-- C binds value to coffee_brew_time -->
 		<lv_arc
 			width="450" height="450"
 			align="center"
 			min_value="0" max_value="25"
-			subject="coffee_brew_time"
+			value="0"
 			bg_start_angle="300" bg_end_angle="60"
 			mode="normal"
 		>
