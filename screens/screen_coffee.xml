@@ -5,61 +5,99 @@
 			width="480" height="480"
 			radius="240" border_width="0" pad_all="0"
 		/>
-		<style name="style_title"
-			text_color="#text_primary" text_font="font_heading"
-		/>
-		<style name="style_scroll_container"
+
+		<!-- Flex column for icon + label -->
+		<style name="style_item_col"
 			bg_opa="0" border_width="0"
-			pad_all="0"
-			layout="flex" flex_flow="row"
-			pad_column="12"
+			width="content" height="content"
+			layout="flex" flex_flow="column"
 			flex_cross_place="center"
+			pad_row="8"
 		/>
-		<style name="style_play_btn"
-			width="56" height="56" radius="28"
-			bg_color="#accent" bg_opa="100%"
-			border_width="0" pad_all="0"
+
+		<!-- Selected item (top center, prominent) -->
+		<style name="style_icon_selected"
+			image_recolor="#accent" image_recolor_opa="100%"
+			transform_scale_x="384" transform_scale_y="384"
 		/>
-		<style name="style_play_pressed"
-			bg_opa="70%"
+		<style name="style_label_selected"
+			text_color="#text_primary" text_font="font_body"
+			text_align="center"
 		/>
-		<style name="style_play_icon"
-			image_recolor="#bg_primary" image_recolor_opa="100%"
+
+		<!-- Normal item (left / right) -->
+		<style name="style_icon_normal"
+			image_recolor="#accent" image_recolor_opa="60%"
+		/>
+		<style name="style_label_normal"
+			text_color="#text_secondary" text_font="font_caption"
+			text_align="center"
+		/>
+
+		<!-- Dim item (bottom, far) -->
+		<style name="style_icon_dim"
+			image_recolor="#accent" image_recolor_opa="30%"
+			transform_scale_x="192" transform_scale_y="192"
+		/>
+		<style name="style_label_dim"
+			text_color="#text_tertiary" text_font="font_tiny"
+			text_align="center"
 		/>
 	</styles>
 
 	<view style_layout="none">
 		<style name="style_bg" />
 
-		<!-- Back button -->
-		<back_button align="center" x="-135" y="-130">
+		<!-- Back button (top center) -->
+		<back_button align="center" y="-170">
 			<screen_load_event screen="screen_main"
 				anim_type="fade_in" duration="300" />
 		</back_button>
 
-		<!-- Title -->
-		<lv_label text="Coffee" align="center" y="-130">
-			<style name="style_title" />
-		</lv_label>
+		<!-- Circular coffee selector — firmware rotates positions on input -->
 
-		<!-- Horizontally scrollable coffee types -->
-		<lv_obj align="center" y="10" width="340" height="160">
-			<style name="style_scroll_container" />
-
-			<coffee_type_card icon="icon_espresso" label="Espresso" />
-			<coffee_type_card icon="icon_cappuccino" label="Cappuccino" />
-			<coffee_type_card icon="icon_lungo" label="Lungo" />
-			<coffee_type_card icon="icon_americano" label="Americano" />
+		<!-- Selected: Espresso (top center, large) -->
+		<lv_obj align="center" y="-65">
+			<style name="style_item_col" />
+			<lv_image src="icon_espresso">
+				<style name="style_icon_selected" />
+			</lv_image>
+			<lv_label text="Espresso">
+				<style name="style_label_selected" />
+			</lv_label>
 		</lv_obj>
 
-		<!-- Play / Start button -->
-		<lv_button align="center" y="155">
-			<remove_style_all />
-			<style name="style_play_btn" />
-			<style name="style_play_pressed" selector="pressed" />
-			<lv_image src="icon_play" align="center">
-				<style name="style_play_icon" />
+		<!-- Right: Cappuccino -->
+		<lv_obj align="center" x="120" y="35">
+			<style name="style_item_col" />
+			<lv_image src="icon_cappuccino">
+				<style name="style_icon_normal" />
 			</lv_image>
-		</lv_button>
+			<lv_label text="Cappuccino">
+				<style name="style_label_normal" />
+			</lv_label>
+		</lv_obj>
+
+		<!-- Bottom: Lungo (dimmed) -->
+		<lv_obj align="center" y="130">
+			<style name="style_item_col" />
+			<lv_image src="icon_lungo">
+				<style name="style_icon_dim" />
+			</lv_image>
+			<lv_label text="Lungo">
+				<style name="style_label_dim" />
+			</lv_label>
+		</lv_obj>
+
+		<!-- Left: Americano -->
+		<lv_obj align="center" x="-120" y="35">
+			<style name="style_item_col" />
+			<lv_image src="icon_americano">
+				<style name="style_icon_normal" />
+			</lv_image>
+			<lv_label text="Americano">
+				<style name="style_label_normal" />
+			</lv_label>
+		</lv_obj>
 	</view>
 </screen>
