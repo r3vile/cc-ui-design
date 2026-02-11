@@ -1,0 +1,113 @@
+<component>
+	<api>
+		<prop name="icon" type="image" default="icon_steam" />
+		<prop name="arc_min" type="string" default="0" />
+		<prop name="arc_max" type="string" default="150" />
+		<prop name="arc_value" type="string" default="25" />
+		<prop name="temp_text" type="string" default="25°C" />
+		<prop name="state_text" type="string" default="Idle" />
+		<prop name="target_text" type="string" default="Target: 125°C" />
+	</api>
+
+	<styles>
+		<style name="style_container"
+			bg_opa="0" border_width="0"
+			width="480" height="480"
+			pad_all="0"
+		/>
+		<style name="style_arc_bg"
+			arc_color="#accent_dim" arc_width="14" arc_rounded="true"
+		/>
+		<style name="style_arc_ind"
+			arc_color="#accent" arc_width="14" arc_rounded="true"
+		/>
+		<style name="style_knob_hide"
+			bg_opa="0" pad_all="0"
+		/>
+		<style name="style_icon"
+			image_recolor="#accent" image_recolor_opa="100%"
+		/>
+		<style name="style_temp"
+			text_color="#text_primary" text_font="font_display"
+			text_align="center"
+		/>
+		<style name="style_state"
+			text_color="#text_secondary" text_font="font_body"
+			text_align="center"
+		/>
+		<style name="style_target"
+			text_color="#text_tertiary" text_font="font_caption"
+			text_align="center"
+		/>
+		<style name="style_center_col"
+			bg_opa="0" border_width="0"
+			width="content" height="content"
+			layout="flex" flex_flow="column"
+			flex_cross_place="center"
+			pad_row="4"
+		/>
+		<style name="style_play_btn"
+			width="56" height="56" radius="28"
+			bg_color="#accent" bg_opa="100%"
+			border_width="0" pad_all="0"
+		/>
+		<style name="style_play_pressed"
+			bg_opa="70%"
+		/>
+		<style name="style_play_icon"
+			image_recolor="#bg_primary" image_recolor_opa="100%"
+		/>
+	</styles>
+
+	<view style_layout="none">
+		<style name="style_container" />
+
+		<!-- Temperature arc gauge — hugs the display border -->
+		<lv_arc
+			width="450" height="450"
+			align="center"
+			min_value="$arc_min" max_value="$arc_max"
+			value="$arc_value"
+			bg_start_angle="135" bg_end_angle="45"
+			mode="normal"
+		>
+			<style name="style_arc_bg" selector="main" />
+			<style name="style_arc_ind" selector="indicator" />
+			<style name="style_knob_hide" selector="knob" />
+		</lv_arc>
+
+		<!-- Center info: icon + temperature + state + target -->
+		<lv_obj align="center" y="-15">
+			<style name="style_center_col" />
+
+			<lv_image src="$icon">
+				<style name="style_icon" />
+			</lv_image>
+			<lv_label text="$temp_text">
+				<style name="style_temp" />
+			</lv_label>
+			<lv_label text="$state_text">
+				<style name="style_state" />
+			</lv_label>
+			<lv_label text="$target_text">
+				<style name="style_target" />
+			</lv_label>
+		</lv_obj>
+
+		<!-- Back button (top center, below the arc) -->
+		<back_button align="center" y="-170">
+			<screen_load_event screen="screen_main"
+				anim_type="fade_in" duration="300" />
+		</back_button>
+
+		<!-- Play / Start button (bottom center, in the arc gap) -->
+		<lv_button align="center" y="165">
+			<remove_style_all />
+			<style name="style_play_btn" />
+			<style name="style_play_pressed" selector="pressed" />
+			<lv_image src="icon_play" align="center">
+				<style name="style_play_icon" />
+			</lv_image>
+		</lv_button>
+	</view>
+</component>
