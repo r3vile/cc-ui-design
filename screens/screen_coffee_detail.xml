@@ -55,13 +55,12 @@
 				anim_type="fade_in" duration="300" />
 		</back_button>
 
-		<!-- Left arc: Current temperature (fills bottom → top) -->
-		<!-- C binds value to coffee_temp_current -->
+		<!-- Left arc: Current temperature -->
 		<lv_arc
 			width="450" height="450"
 			align="center"
 			min_value="0" max_value="93"
-			value="25"
+			bind_value="temp_current"
 			bg_start_angle="120" bg_end_angle="240"
 			mode="normal"
 		>
@@ -70,13 +69,12 @@
 			<style name="style_knob_hide" selector="knob" />
 		</lv_arc>
 
-		<!-- Right arc: Brew progress (fills top → bottom) -->
-		<!-- C binds value to coffee_brew_time -->
+		<!-- Right arc: Brew progress -->
 		<lv_arc
 			width="450" height="450"
 			align="center"
 			min_value="0" max_value="25"
-			value="0"
+			bind_value="brew_time"
 			bg_start_angle="300" bg_end_angle="60"
 			mode="normal"
 		>
@@ -85,16 +83,16 @@
 			<style name="style_knob_hide" selector="knob" />
 		</lv_arc>
 
-		<!-- Left arc readout — C binds to coffee_temp_current, fmt "%d°C" -->
-		<lv_label text="25°C" align="center" x="-163" y="-8">
+		<!-- Left arc readout -->
+		<lv_label bind_text="temp_text" align="center" x="-163" y="-8">
 			<style name="style_readout_value" />
 		</lv_label>
 		<lv_label text="temp" align="center" x="-163" y="8">
 			<style name="style_readout_label" />
 		</lv_label>
 
-		<!-- Right arc readout — C binds to coffee_brew_time, fmt "%ds" -->
-		<lv_label text="0s" align="center" x="163" y="-8">
+		<!-- Right arc readout -->
+		<lv_label bind_text="brew_text" align="center" x="163" y="-8">
 			<style name="style_readout_value" />
 		</lv_label>
 		<lv_label text="time" align="center" x="163" y="8">
@@ -108,12 +106,10 @@
 			<lv_image src="icon_espresso">
 				<style name="style_icon" />
 			</lv_image>
-			<!-- C binds to coffee_name -->
-			<lv_label text="Espresso">
+			<lv_label bind_text="coffee_name">
 				<style name="style_name" />
 			</lv_label>
-			<!-- C binds to coffee_state -->
-			<lv_label text="Idle">
+			<lv_label bind_text="state">
 				<style name="style_param" />
 			</lv_label>
 			<lv_label text="93°C · 25s · 36g">

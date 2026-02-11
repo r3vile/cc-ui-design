@@ -47,23 +47,17 @@
 	</styles>
 
 	<subjects>
-		<!-- Steam -->
-		<int name="steam_temp_current" value="25" />
-		<int name="steam_temp_target" value="125" />
-		<string name="steam_state" value="Idle" />
+		<!-- Shared temperature (firmware sets per active mode) -->
+		<int name="temp_current" value="25" />
+		<int name="temp_target" value="125" />
+		<string name="temp_text" value="25°C" />
+		<string name="target_text" value="Target: 125°C" />
+		<string name="state" value="Idle" />
 
-		<!-- Hot water -->
-		<int name="water_temp_current" value="25" />
-		<int name="water_temp_target" value="95" />
-		<string name="water_state" value="Idle" />
-		<int name="water_running" value="0" />
-
-		<!-- Coffee -->
-		<int name="coffee_temp_current" value="25" />
-		<int name="coffee_temp_target" value="93" />
-		<string name="coffee_state" value="Idle" />
-		<int name="coffee_brew_time" value="0" />
-		<int name="coffee_brew_target" value="25" />
+		<!-- Coffee specific -->
+		<int name="brew_time" value="0" />
+		<int name="brew_target" value="25" />
+		<string name="brew_text" value="0s" />
 		<string name="coffee_name" value="Espresso" />
 		<int name="coffee_selected" value="0" />
 	</subjects>
