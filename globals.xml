@@ -14,8 +14,8 @@
 		<color name="bg_secondary" value="0x1A1A1F" />
 		<color name="bg_tertiary" value="0x26262E" />
 		<color name="text_primary" value="0xF0F0F2" />
-		<color name="text_secondary" value="0x8A8A96" />
-		<color name="text_tertiary" value="0x55555F" />
+		<color name="text_secondary" value="0xA0A0AC" />
+		<color name="text_tertiary" value="0x78788A" />
 		<color name="accent" value="0xD4A574" />
 		<color name="accent_dim" value="0x6B5338" />
 		<color name="success" value="0x4ADE80" />
