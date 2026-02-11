@@ -1,8 +1,17 @@
 <component>
 	<styles>
-		<style name="style_btn" width="44" height="44" radius="22" border_width="0" pad_all="0" />
+		<style
+			name="style_btn"
+			width="80"
+			height="80"
+			radius="40"
+			border_width="0"
+			pad_all="0"
+			bg_color="#accent"
+			bg_opa="100%"
+		/>
 		<style name="style_pressed" bg_color="#accent" bg_opa="30%" />
-		<style name="style_icon" image_recolor="#text_primary" image_recolor_opa="100%" />
+		<style name="style_icon" image_recolor="#bg_primary" image_recolor_opa="100%" />
 	</styles>
 
 	<view extends="lv_button">
@@ -10,7 +19,7 @@
 		<style name="style_btn" />
 		<style name="style_pressed" selector="pressed" />
 
-		<lv_image src="icon_back" align="center">
+		<lv_image src="icon_play" align="center">
 			<style name="style_icon" />
 		</lv_image>
 	</view>
