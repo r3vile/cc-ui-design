@@ -1,0 +1,123 @@
+<screen>
+	<styles>
+		<style name="style_bg"
+			bg_color="#bg_primary" bg_opa="100%"
+			width="480" height="480"
+			radius="240" border_width="0" pad_all="0"
+		/>
+
+		<!-- Side arcs -->
+		<style name="style_arc_bg" arc_color="#accent_dim" arc_width="14" arc_rounded="true" />
+		<style name="style_arc_ind" arc_color="#accent" arc_width="14" arc_rounded="true" />
+		<style name="style_knob_hide" bg_opa="0" pad_all="0" />
+
+		<!-- Center column -->
+		<style name="style_center_col"
+			bg_opa="0" border_width="0"
+			width="content" height="content"
+			layout="flex" flex_flow="column"
+			flex_cross_place="center"
+			pad_row="4"
+		/>
+		<style name="style_icon"
+			image_recolor="#accent" image_recolor_opa="100%"
+		/>
+		<style name="style_name"
+			text_color="#text_primary" text_font="font_heading"
+			text_align="center"
+		/>
+		<style name="style_param"
+			text_color="#text_secondary" text_font="font_body"
+			text_align="center"
+		/>
+		<style name="style_detail"
+			text_color="#text_tertiary" text_font="font_caption"
+			text_align="center"
+		/>
+
+		<!-- Arc readout labels -->
+		<style name="style_readout_value"
+			text_color="#text_secondary" text_font="font_caption"
+			text_align="center"
+		/>
+		<style name="style_readout_label"
+			text_color="#text_tertiary" text_font="font_tiny"
+			text_align="center"
+		/>
+	</styles>
+
+	<view style_layout="none">
+		<style name="style_bg" />
+
+		<!-- Back button (top center) -->
+		<back_button align="center" y="-170">
+			<screen_load_event screen="screen_coffee"
+				anim_type="fade_in" duration="300" />
+		</back_button>
+
+		<!-- Left arc: Current temperature (fills bottom → top) -->
+		<lv_arc
+			width="450" height="450"
+			align="center"
+			min_value="0" max_value="93"
+			value="25"
+			bg_start_angle="120" bg_end_angle="240"
+			mode="normal"
+		>
+			<style name="style_arc_bg" selector="main" />
+			<style name="style_arc_ind" selector="indicator" />
+			<style name="style_knob_hide" selector="knob" />
+		</lv_arc>
+
+		<!-- Right arc: Brew progress (fills top → bottom) -->
+		<lv_arc
+			width="450" height="450"
+			align="center"
+			min_value="0" max_value="25"
+			value="0"
+			bg_start_angle="300" bg_end_angle="60"
+			mode="normal"
+		>
+			<style name="style_arc_bg" selector="main" />
+			<style name="style_arc_ind" selector="indicator" />
+			<style name="style_knob_hide" selector="knob" />
+		</lv_arc>
+
+		<!-- Left arc readout (temperature) -->
+		<lv_label text="25°C" align="center" x="-163" y="-8">
+			<style name="style_readout_value" />
+		</lv_label>
+		<lv_label text="temp" align="center" x="-163" y="8">
+			<style name="style_readout_label" />
+		</lv_label>
+
+		<!-- Right arc readout (brew time) -->
+		<lv_label text="0s" align="center" x="163" y="-8">
+			<style name="style_readout_value" />
+		</lv_label>
+		<lv_label text="time" align="center" x="163" y="8">
+			<style name="style_readout_label" />
+		</lv_label>
+
+		<!-- Center info: icon + name + parameters -->
+		<lv_obj align="center" y="-15">
+			<style name="style_center_col" />
+
+			<lv_image src="icon_espresso">
+				<style name="style_icon" />
+			</lv_image>
+			<lv_label text="Espresso">
+				<style name="style_name" />
+			</lv_label>
+			<lv_label text="93°C · 25s · 36g">
+				<style name="style_param" />
+			</lv_label>
+			<lv_label text="2s preinfusion">
+				<style name="style_detail" />
+			</lv_label>
+		</lv_obj>
+
+		<!-- Play / Start button (bottom center) -->
+		<play_button align="center" y="145" />
+	</view>
+</screen>
